@@ -14,7 +14,7 @@ Esta versión del capítulo no ha sido editada por un humano. Fue generada con l
 Uno de los usos más extendidos de la IA hoy en día es la escritura. Para bien o para mal, el texto generado por IA está en todas partes —incluso en capítulos como este. La pregunta real no es si la IA estuvo involucrada, sino cuánto influyó en la escritura. ¿Generó la IA el capítulo completo a partir de un prompt como "escríbeme un capítulo sobre escribir con IA"? ¿O simplemente organizó ideas que el autor ya tenía claramente formuladas, como intento hacer aquí?
 
 ::: {.callout-note}
-Puedes ver la discusión original que tuve con la IA para generar este capítulo aquí: https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed.
+Puedes ver la discusión original que tuve con la IA para generar este capítulo aquí: <https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed>.
 :::
 
 Los large language models (LLMs) están diseñados para generar texto. Esa es su función central. La calidad de ese texto, sin embargo, es una cuestión aparte. Con el tiempo, la gramática y la fluidez de la escritura generada por IA han mejorado significativamente. Lo que no ha mejorado en la misma medida es la fiabilidad del contenido. Los sistemas de IA aún pueden producir afirmaciones inexactas o engañosas. Por esa razón, es esencial que los usuarios revisen cuidadosamente todo lo que produce una IA. La responsabilidad sobre la precisión sigue recayendo en el autor.

@@ -62,7 +62,13 @@ This note should remain until a human has reviewed and approved the content.
 A Spanish version of the book is maintained under the `es/` directory. When translating:
 
 - Preserve the same structure and formatting as the English version
-- Maintain technical terms in English when they are commonly used that way (e.g., "LLM", "prompt", "framework")
+- Maintain technical terms in English when they are commonly used that way. This includes, but is not limited to:
+  - AI/ML terminology: "LLM", "large language model", "prompt", "framework", "transformer", "token", "MCP", "Model Context Protocol"
+  - Software and tool names: "Grammarly", "ChatGPT", "GitHub Copilot", "VS Code", "Positron", "RStudio", "Ollama"
+  - Package and library names: e.g., `netdiffuseR`, `tidyverse`
+  - Grant and funding identifiers: e.g., "NIH R21", "NSF"
+  - URLs and links: leave unchanged
+  - File and path names: e.g., `skills.md`, `es/`, `_quarto.yaml`
 - Ensure the narrative tone carries over naturally into Spanish
 - Add the Spanish AI disclosure callout as shown above
 

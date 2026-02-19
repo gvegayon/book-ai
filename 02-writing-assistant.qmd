@@ -14,7 +14,7 @@ This version of the chapter hasn't been edited by a human. It was generated with
 One of the most widespread uses of AI today is writing. For better or worse, AI-generated text is now everywhere—even in chapters like this one. The real question is not whether AI was involved, but how much it influenced the writing. Did the AI generate an entire chapter from a prompt such as “write me a chapter about writing with AI”? Or did it simply organize ideas that were already clearly formulated by the author, as I am attempting to do here?
 
 ::: {.callout-note}
-You can see the original discussion I had with the AI to generate this chapter here: https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed. You can also see it in [02-writing-assistant-draft.md](02-writing-assistant-draft.md).
+You can see the original discussion I had with the AI to generate this chapter here: <https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed>. You can also see it in [02-writing-assistant-draft.md](02-writing-assistant-draft.md).
 :::
 
 Large language models (LLMs) are designed to generate text. That is their core function. The quality of that text, however, is a separate matter. Over time, the grammar and fluency of AI-generated writing have improved significantly. What has not improved to the same degree is the reliability of the content. AI systems can still produce statements that are inaccurate or misleading. For that reason, it is essential that users carefully review anything an AI produces. The responsibility for accuracy remains with the author.
