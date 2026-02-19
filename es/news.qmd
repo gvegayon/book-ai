@@ -1,26 +1,20 @@
 ---
 date: 2026-02-18
-date-modified: 2026-02-18
+date-modified: 2026-02-19
 ---
 
 # Novedades
 
 ## Versión 2026.02.18
 
-- Corrección en la sección derivando el ERGM diádico-independiente.
+Primera versión pública de *AI for the Scientist in a Hurry*. El libro aún está en desarrollo, pero la estructura general ya está definida. Los capítulos actuales incluyen:
 
-- Mejoras de gramática y consistencia al capítulo de ERGM, incluyendo:
-  - Corrección de inconsistencia de variables: $x_{-ij}$ → $y_{-ij}$
-  - Mejora de claridad: reemplazado "la probabilidad condicional del nodo $n$ ganando función $k$" con "la probabilidad condicional del vínculo $y_{ij}$ ocurriendo"
-  - Eliminados envoltorios equation* innecesarios para mejor compatibilidad con LaTeX
+- **Introducción**: Motivación y alcance del libro.
+- **Revisión General de la IA**: Una introducción conceptual a los Large Language Models y la IA agéntica, incluyendo el papel del contexto y el paso de modelos estáticos a agentes activos.
+- **La IA como Asistente de Escritura**: Cómo usar los LLMs para apoyar tareas de escritura científica.
+- **Programación con IA**: Uso de asistentes de código con IA en entornos como VS Code, Positron y RStudio.
+- **IA Agéntica**: Una mirada más profunda a los frameworks agénticos y el Model Context Protocol (MCP).
+- **Evaluación de la Escritura**: Uso de IA para revisar documentos de alto impacto, como solicitudes de financiamiento.
+- **Uso Programático de la IA**: Trabajo con herramientas de IA de forma programática, incluyendo Ollama y bibliotecas relacionadas.
 
-## Versión 2025.09.07
-
-- Se corrigieron errores tipográficos en las fórmulas del capítulo de estadística bayesiana y en el capítulo de comportamiento.
-
-
-## Versión 2025.09.03
-
-- Desde ahora, el libro cuenta con una sección de novedades. Intentaré mantener esta al día incluyendo los cambios realizados entre versiones. Versiones anteriores se encontrarán disponibles en GitHub como "releases".
-
-- Ediciones menores al capítulo de ERGMs.
+La traducción al español se desarrolla en paralelo bajo el directorio `es/`.

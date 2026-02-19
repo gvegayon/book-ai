@@ -1,28 +1,20 @@
 ---
 date: 2026-02-18
-date-modified: 2026-02-18
+date-modified: 2026-02-19
 ---
 
 # News
 
 ## Version 2026.02.18
 
-- Corrected mathematical derivation of the dyadic-independent ERGM.
+First public version of *AI for the Scientist in a Hurry*. The book is still a work in progress, but the overall structure is in place. Current chapters include:
 
-- Grammar and consistency improvements to the ERGM chapter, including:
-  - Fixed typo: "ocurring" → "occurring"
-  - Corrected variable inconsistency: $x_{-ij}$ → $y_{-ij}$
-  - Improved clarity: replaced "Henceforth, the conditional probability of node $n$ gaining function $k$" with "Therefore, the conditional probability of the tie $y_{ij}$ occurring"
-  - Fixed missing $\in$ in summation notation
-  - Removed unnecessary equation* wrappers for better LaTeX compatibility
+- **Introduction**: Motivation and scope of the book.
+- **Overview of AI**: A conceptual introduction to Large Language Models and agentic AI, including the role of context and the shift from static models to acting agents.
+- **AI as a Writing Assistant**: How to use LLMs to support scientific writing tasks.
+- **Programming with AI**: Using AI coding assistants in environments like VS Code, Positron, and RStudio.
+- **Agentic AI**: A deeper look at agentic frameworks and the Model Context Protocol (MCP).
+- **Evaluating Writing**: Using AI to review high-stakes documents such as grant applications.
+- **Programmatic AI Usage**: Working with AI tools programmatically, including Ollama and related libraries.
 
-## Version 2025.09.07
-
-- Corrected math typos in the Bayesian statistics chapter and the behavior chapter.
-
-
-## Version 2025.09.03
-
-- Started the news section of the book. I will try to keep track of the changes made to the book here. Previous versions of the book will now be archived using releases on GitHub.
-
-- Minor edits to the ERGM chapter.
+A Spanish translation is being developed in parallel under the `es/` directory.
