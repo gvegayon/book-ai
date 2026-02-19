@@ -1,0 +1,34 @@
+FROM ghcr.io/rocker-org/devcontainer/geospatial:4.5
+
+RUN install2.r --error languageserver && \
+    installGithub.r nx10/httpgd
+
+# Installing the R package spatialreg
+RUN apt-get update && apt-get install --no-install-recommends \
+	-y libudunits2-dev libproj-dev libgdal-dev
+RUN install2.r spatialreg
+
+# Missing libraries
+RUN apt-get install --no-install-recommends -y libglpk-dev
+
+RUN install2.r --error -n 4 \
+	igraph \
+	netplot \
+	netdiffuseR \
+	Matrix \
+	sna \
+	network \
+	ergm \
+	intergraph \
+	texreg \
+	readstata13 \
+	gridExtra \
+	rgexf \
+	microbenchmark \
+	RSiena
+
+RUN apt-get update && apt-get install -y --no-install-recommends vim
+
+RUN quarto install tinytex
+
+CMD ["bash"]

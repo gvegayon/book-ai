@@ -1,0 +1,36 @@
+---
+date: 2026-02-18
+date-modified: 2026-02-18
+---
+
+# Introduction
+
+::: {.callout-note title="AI version"}
+This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
+:::
+
+Artificial intelligence is here, and whether we welcome it or resist it, it is steadily weaving itself into nearly every aspect of our daily lives. That statement can sound alarmist to some, unsettling to others, and deeply encouraging to many. I prefer to treat it as something simpler: a fact. AI is no longer a futuristic concept or a niche tool used by a handful of specialists. It is becoming part of the infrastructure of how we work, write, code, search, communicate, and make decisions.
+
+When most people think about AI today, they think about large language models—LLMs—and the ability to “chat” with systems like ChatGPT or Gemini. But AI is not just LLMs. It is a broader combination of methods, architectures, and systems. In my view, the most important recent innovation is not merely the possibility of conversing with an LLM. It is the development of agentic AI.
+
+By agentic AI, I mean AI systems that are embedded in workflows or other software environments in ways that allow them to interact with other systems. These systems do not just respond to prompts; they can take actions, retrieve information, write files, modify code, and connect tools together. That shift—from a chatbot in a window to an agent embedded in a workflow—is, in my opinion, the real game changer.
+
+It is through agentic AI that tools like ChatGPT, Gemini, and others are becoming genuinely useful beyond experimentation. A recent example of this shift is the purchase of OpenClaw by OpenAI, the company behind ChatGPT. OpenClaw represents what many of us had in mind when we first began imagining AI assistants: systems that could go beyond answering questions and instead carry out tasks on our behalf. Although I have not used OpenClaw directly—partly because it is still new and there are ongoing security concerns—I believe this type of product will have a significant impact across the economy.
+
+Before speculating too much about what the future of AI might hold, it is worth clarifying the purpose of this book. As I mentioned in the preface, I see this project as a way to keep myself—and my collaborators—up to date with the evolving landscape of AI tools, as well as the practical dos and don’ts of using them responsibly and effectively.
+
+With that goal in mind, the book is organized as follows.
+
+Chapter One provides an overview of the most important concepts and how they connect to current products and innovations. It discusses what an LLM is, how these systems work, why context matters, and what the prevailing architectures behind many of these tools look like. It also introduces agentic AI and its relationship to Model Context Protocols (MCPs), along with references to other useful sources for readers who want to go deeper.
+
+Chapter Two focuses on applications of AI as a writing assistant. It covers best practices, practical guidance around prompt engineering, and concrete examples of usage.
+
+Chapter Three explores how to use AI for programming, with particular attention to AI agents integrated into tools such as VS Code, Positron, and RStudio (by Posit). This chapter also takes a deeper dive into context in AI and how to make the most of it in technical workflows.
+
+Chapter Four is dedicated to agentic AI using Claude and GitHub Copilot, which, in my personal opinion, are among the most transformative tools currently available. This chapter includes live examples drawn from my own projects, including cases where things did not work as expected.
+
+Chapter Five broadens the scope with additional examples of AI in other contexts, including how to leverage AI to evaluate your own writing—for example, reviewing something as high-stakes as an NIH grant.
+
+Finally, Chapter Six introduces more advanced applications, focusing on how to use AI programmatically through tools such as Ollama and other open-source frameworks.
+
+This structure reflects both the rapid evolution of the field and my own ongoing effort to understand it. The goal is not to predict the future, but to engage with the present—carefully, critically, and practically.

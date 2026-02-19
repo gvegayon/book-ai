@@ -1,0 +1,37 @@
+---
+date: 2026-02-18
+date-modified: 2026-02-18
+---
+
+::: {.callout-note title="AI version"}
+This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
+:::
+
+# Preface
+
+The idea for this book emerged gradually, shaped by multiple discussions and recent talks I have given in a variety of settings. These conversations have taken place in conference halls, internal institutional meetings, invited lectures, and informal chats with friends. They have also unfolded in my classroom, where I teach advanced programming, and during my time working at the CDC, where AI is slowly being adopted into everyday workflows. Even at home, I find myself trying to explain to my children what AI is—and just as importantly, what it is not. Across all these spaces, the same themes, questions, and misunderstandings continue to surface, and this book is my attempt to bring some coherence to them.
+
+With the current level of hype surrounding AI, I felt the need to create something that helps me—and hopefully others—stay grounded and up to date. There is an overwhelming amount of information about what these systems can do, but less clarity about what is actually useful, what constitutes a good example of meaningful application, and what mistakes we should be careful not to repeat. This book grows out of that need for orientation: a way to step back, take stock of what is out there, and think critically about how we engage with it.
+
+This project is also closely tied to my personal experience. I consider myself an advocate and early adopter of AI, and I have been genuinely excited about its potential. At the same time, I have become increasingly concerned about some of the pitfalls—particularly how easily these tools can make us less careful thinkers if we rely on them uncritically. That tension troubles me. As a colleague once put it, the goal should be to have AI enhance us, not replace us. Part of this book is therefore reflective: an effort to articulate recommendations and principles that help ensure these tools strengthen, rather than erode, our intellectual habits.
+
+Although I am an advocate for AI, I recognized early on that I am not an AI scientist in the sense of building foundational models or competing with the multibillion-dollar efforts of private companies developing them. That is not my aim. Instead, I see my role as someone who tries to think ahead about how best to use these tools—how to integrate them thoughtfully into scientific work, teaching, and daily problem-solving. My focus is not on building the models themselves, but on understanding how to work with them wisely.
+
+Like the other books I am currently working on, this one will evolve over time. I am building it primarily as a resource for myself and for those who work closely with me—other scientists and young scholars navigating this rapidly changing landscape. Of course, I would be glad if it proves useful to a broader audience. But at its core, this book is an ongoing effort to think clearly about AI in practice: what it is, what it can do, and how we can use it responsibly and effectively.
+
+## Spanish Version Available
+
+A Spanish translation of this book is available at [es/](es/index.html). The Spanish version was created using AI translation and may require human review for technical accuracy.
+
+
+## About the Author
+
+I am a Research Assistant Professor at the <a href="https://medicine.utah.edu/internal-medicine/epidemiology" target="_blank">**University of Utah's Division of Epidemiology**</a>, where I work on studying Complex Systems using Statistical Computing. I was born and raised in Chile. I have over fifteen years of experience <a href="https://github.com/gvegayon" target="_blank">developing scientific software</a> focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A. <a href="https://uai.cl" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and Biostatistics (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
+
+I obtained my Ph.D. in Biostatistics under the supervision of <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">**Prof. Paul Marjoram**</a> and <a href="https://kayladelahaye.net/" target="_blank">**Prof. Kayla de la Haye**</a>, with my dissertation titled "*Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems.*"
+
+If you'd like to learn more about me, please visit my website at <a href="https://ggvy.cl" target="_blank">https://ggvy.cl</a>.
+
+## AI Disclosure
+
+Since the beginning of this project, I have been using AI to help me write this book. Mainly, I use a combination of ChatGPT, [GitHub co-pilot](https://github.com/features/copilot){target="_blank"}, which aids with code and text, and [Grammarly](https://grammarly.com){target="_blank"}, which aids with grammar and style. AI's role has been to help me write faster, including editing and proofreading, but the core conceptualization and ideas are my own. **Since I do use AI to assist in writing, I will be transparent about it indicating which pieces of the book are mostly AI-generated and unreviewed by me.**

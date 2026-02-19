@@ -1,0 +1,39 @@
+---
+date-modified: 2026-02-18
+date: 2026-02-18
+---
+
+::: {.callout-warning}
+## Nota de Traducción
+Esta versión del capítulo fue traducida de manera automática utilizando IA. El capítulo aún no ha sido revisado por un humano.
+:::
+
+# Prefacio
+
+La idea de este libro surgió gradualmente, moldeada por múltiples discusiones y charlas recientes que he dado en diversos contextos. Estas conversaciones han tenido lugar en salas de conferencias, reuniones institucionales internas, conferencias invitadas y charlas informales con amigos. También se han desarrollado en mi salón de clases, donde enseño programación avanzada, y durante mi tiempo trabajando en los CDC, donde la IA está siendo adoptada lentamente en los flujos de trabajo cotidianos. Incluso en casa, me encuentro tratando de explicar a mis hijos qué es la IA—y, igual de importante, qué no es. En todos estos espacios, los mismos temas, preguntas y malentendidos continúan surgiendo, y este libro es mi intento de darles coherencia.
+
+Con el nivel actual de expectativas exageradas que rodean a la IA, sentí la necesidad de crear algo que me ayude—y con suerte a otros—a mantener los pies en la tierra y estar actualizado. Hay una cantidad abrumadora de información sobre lo que estos sistemas pueden hacer, pero menos claridad sobre lo que es realmente útil, lo que constituye un buen ejemplo de aplicación significativa, y qué errores debemos tener cuidado de no repetir. Este libro nace de esa necesidad de orientación: una forma de dar un paso atrás, hacer un balance de lo que hay afuera, y pensar críticamente sobre cómo nos relacionamos con ello.
+
+Este proyecto también está estrechamente ligado a mi experiencia personal. Me considero un defensor y adoptador temprano de la IA, y he estado genuinamente entusiasmado con su potencial. Al mismo tiempo, me he vuelto cada vez más preocupado por algunas de las trampas—particularmente lo fácilmente que estas herramientas pueden hacernos pensadores menos cuidadosos si dependemos de ellas de manera acrítica. Esa tensión me inquieta. Como dijo una vez un colega, el objetivo debería ser que la IA nos mejore, no que nos reemplace. Parte de este libro es por lo tanto reflexivo: un esfuerzo por articular recomendaciones y principios que ayuden a asegurar que estas herramientas fortalezcan, en lugar de erosionar, nuestros hábitos intelectuales.
+
+Aunque soy un defensor de la IA, reconocí desde el principio que no soy un científico de IA en el sentido de construir modelos fundamentales o competir con los esfuerzos multimillonarios de las empresas privadas que los desarrollan. Ese no es mi objetivo. En cambio, veo mi rol como alguien que intenta pensar con anticipación sobre cómo usar mejor estas herramientas—cómo integrarlas de manera reflexiva en el trabajo científico, la enseñanza y la resolución de problemas cotidianos. Mi enfoque no está en construir los modelos en sí, sino en entender cómo trabajar con ellos sabiamente.
+
+Como los otros libros en los que estoy trabajando actualmente, este evolucionará con el tiempo. Lo estoy construyendo principalmente como un recurso para mí mismo y para quienes trabajan de cerca conmigo—otros científicos y jóvenes investigadores navegando este panorama rápidamente cambiante. Por supuesto, me alegraría si resulta útil para una audiencia más amplia. Pero en su esencia, este libro es un esfuerzo continuo por pensar claramente sobre la IA en la práctica: qué es, qué puede hacer, y cómo podemos usarla de manera responsable y efectiva.
+
+## Versión en Inglés Disponible
+
+Una versión en inglés de este libro está disponible en [../](../index.html). La versión en inglés es la versión original del libro.
+
+
+## Sobre el Autor
+
+Soy Profesor Asistente de Investigación en la <a href="https://medicine.utah.edu/internal-medicine/epidemiology" target="_blank">**División de Epidemiología de la Universidad de Utah**</a>, donde trabajo estudiando Sistemas Complejos utilizando Computación Estadística. Nací y crecí en Chile. Tengo más de quince años de experiencia <a href="https://github.com/gvegayon" target="_blank">desarrollando software científico</a> con enfoque en computación de alto rendimiento, visualización de datos y análisis de redes sociales. Mi formación es en Políticas Públicas (M.A. <a href="https://uai.cl" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
+
+Obtuve mi Ph.D. en Bioestadística bajo la supervisión del <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">**Prof. Paul Marjoram**</a> y la <a href="https://kayladelahaye.net/" target="_blank">**Prof. Kayla de la Haye**</a>, con mi disertación titulada "*Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos.*"
+
+Si desea saber más sobre mí, por favor visite mi sitio web en <a href="https://ggvy.cl" target="_blank">https://ggvy.cl</a>.
+
+## Declaración sobre el Uso de IA
+
+Desde el inicio de este proyecto, he estado usando IA para ayudarme a escribir este libro. Principalmente, uso una combinación de ChatGPT, [GitHub co-pilot](https://github.com/features/copilot){target="_blank"}, que ayuda con código y texto, y [Grammarly](https://grammarly.com){target="_blank"}, que ayuda con gramática y estilo. El rol de la IA ha sido ayudarme a escribir más rápido, incluyendo edición y corrección, pero la conceptualización central y las ideas son mías. **Dado que uso IA para asistir en la escritura, seré transparente al respecto indicando qué partes del libro son principalmente generadas por IA y no han sido revisadas por mí.**
+

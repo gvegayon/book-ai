@@ -1,0 +1,62 @@
+project:
+  type: book
+  output-dir: _docs
+
+execute: 
+  cache: false
+
+book:
+  version: 2026.02.18
+  google-analytics: G-30X6YBX6FJ
+  title: AI for the Scientist in a Hurry
+  subtitle: or "Running Notes and Reflections About AI"
+  author: George G. Vega Yon, Ph.D.
+  language: en
+  original-date: 2018-01-19
+  date: 2026-02-18
+  cover-image: img/book-cover.png
+  cover-image-alt: 'An AI image generated with Bing: Draw an image of a social network. Include a person examining the network and holding a laptop in one hand. The laptop should have the logo of the R programming language.'
+  page-footer: AI for the Scientist in a Hurry - [https://ggvy.cl](https://ggvy.cl){target="_blank"}
+  repo-url: https://github.com/gvegayon/book-ai
+  repo-branch: main
+  repo-actions: [edit, source, issue]
+  image: img/front-page-dalle.png
+  twitter-card:
+    description: 'This (WIP) book is a collection of notes and reflections about using AI for science (and other stuff as well). It includes examples using common AI tools, recommendations, and even some programming using modern AI libraries.'
+    creator: "@gvegayon"
+  site-url: https://book-ai.ggvy.cl
+  sharing: [twitter, linkedin]
+  navbar:
+    # background: light
+    search: true
+
+  chapters: 
+    - index.qmd
+    - 01-intro.qmd
+  appendices:
+    - references.qmd
+    - news.qmd
+  downloads:
+  - pdf
+
+
+bibliography: book.bib
+
+biblio-style: apalike
+
+format: 
+  html:
+    html-math-method: katex
+    toc: true
+    number-sections: false
+    theme: cerulean
+  pdf:
+    geometry: 
+      - top=1in
+      - bottom=1in
+      - left=1in
+      - right=1in
+    fontsize: 12pt
+    fontenc: T1
+    include-in-header: preamble.tex
+    keep-tex: true

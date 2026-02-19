@@ -1,0 +1,36 @@
+---
+date: 2026-02-18
+date-modified: 2026-02-18
+---
+
+# Introducción
+
+::: {.callout-note title="Versión IA"}
+Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
+:::
+
+La inteligencia artificial está aquí, y ya sea que la recibamos con entusiasmo o nos resistamos a ella, se está integrando constantemente en casi todos los aspectos de nuestra vida diaria. Esa afirmación puede sonar alarmante para algunos, inquietante para otros y profundamente alentadora para muchos. Prefiero tratarla como algo más simple: un hecho. La IA ya no es un concepto futurista ni una herramienta de nicho utilizada por un puñado de especialistas. Se está convirtiendo en parte de la infraestructura de cómo trabajamos, escribimos, programamos, buscamos, nos comunicamos y tomamos decisiones.
+
+Cuando la mayoría de las personas piensan en IA hoy en día, piensan en modelos de lenguaje grandes—LLMs—y en la capacidad de "chatear" con sistemas como ChatGPT o Gemini. Pero la IA no es solo LLMs. Es una combinación más amplia de métodos, arquitecturas y sistemas. En mi opinión, la innovación reciente más importante no es simplemente la posibilidad de conversar con un LLM. Es el desarrollo de la IA agéntica.
+
+Por IA agéntica, me refiero a sistemas de IA que están integrados en flujos de trabajo u otros entornos de software de maneras que les permiten interactuar con otros sistemas. Estos sistemas no solo responden a indicaciones; pueden realizar acciones, recuperar información, escribir archivos, modificar código y conectar herramientas entre sí. Ese cambio—de un chatbot en una ventana a un agente integrado en un flujo de trabajo—es, en mi opinión, el verdadero cambio de juego.
+
+Es a través de la IA agéntica que herramientas como ChatGPT, Gemini y otras se están volviendo genuinamente útiles más allá de la experimentación. Un ejemplo reciente de este cambio es la compra de OpenClaw por parte de OpenAI, la empresa detrás de ChatGPT. OpenClaw representa lo que muchos de nosotros teníamos en mente cuando comenzamos a imaginar asistentes de IA: sistemas que pudieran ir más allá de responder preguntas y en su lugar realizar tareas en nuestro nombre. Aunque no he usado OpenClaw directamente—en parte porque todavía es nuevo y hay preocupaciones de seguridad en curso—creo que este tipo de producto tendrá un impacto significativo en toda la economía.
+
+Antes de especular demasiado sobre lo que el futuro de la IA podría deparar, vale la pena aclarar el propósito de este libro. Como mencioné en el prefacio, veo este proyecto como una forma de mantenerme—a mí y a mis colaboradores—actualizados con el panorama en evolución de las herramientas de IA, así como con los consejos prácticos sobre qué hacer y qué no hacer al usarlas de manera responsable y efectiva.
+
+Con ese objetivo en mente, el libro está organizado de la siguiente manera.
+
+El Capítulo Uno proporciona una visión general de los conceptos más importantes y cómo se conectan con los productos e innovaciones actuales. Discute qué es un LLM, cómo funcionan estos sistemas, por qué importa el contexto y cómo son las arquitecturas predominantes detrás de muchas de estas herramientas. También introduce la IA agéntica y su relación con los Protocolos de Contexto de Modelo (MCPs), junto con referencias a otras fuentes útiles para lectores que quieran profundizar más.
+
+El Capítulo Dos se centra en aplicaciones de IA como asistente de escritura. Cubre mejores prácticas, orientación práctica sobre ingeniería de prompts y ejemplos concretos de uso.
+
+El Capítulo Tres explora cómo usar IA para programación, con particular atención a los agentes de IA integrados en herramientas como VS Code, Positron y RStudio (de Posit). Este capítulo también profundiza en el contexto en IA y cómo aprovecharlo al máximo en flujos de trabajo técnicos.
+
+El Capítulo Cuatro está dedicado a la IA agéntica usando Claude y GitHub Copilot, que, en mi opinión personal, están entre las herramientas más transformadoras actualmente disponibles. Este capítulo incluye ejemplos en vivo extraídos de mis propios proyectos, incluyendo casos donde las cosas no funcionaron como se esperaba.
+
+El Capítulo Cinco amplía el alcance con ejemplos adicionales de IA en otros contextos, incluyendo cómo aprovechar la IA para evaluar tu propia escritura—por ejemplo, revisar algo tan importante como una solicitud de subvención del NIH.
+
+Finalmente, el Capítulo Seis introduce aplicaciones más avanzadas, enfocándose en cómo usar IA programáticamente a través de herramientas como Ollama y otros frameworks de código abierto.
+
+Esta estructura refleja tanto la rápida evolución del campo como mi propio esfuerzo continuo por entenderlo. El objetivo no es predecir el futuro, sino interactuar con el presente—cuidadosa, crítica y prácticamente.
