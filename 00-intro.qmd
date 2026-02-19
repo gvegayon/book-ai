@@ -21,16 +21,16 @@ Before speculating too much about what the future of AI might hold, it is worth 
 
 With that goal in mind, the book is organized as follows.
 
-Chapter One provides an overview of the most important concepts and how they connect to current products and innovations. It discusses what an LLM is, how these systems work, why context matters, and what the prevailing architectures behind many of these tools look like. It also introduces agentic AI and its relationship to Model Context Protocols (MCPs), along with references to other useful sources for readers who want to go deeper.
+**Chapter One** provides an overview of the most important concepts and how they connect to current products and innovations. It discusses what an LLM is, how these systems work, why context matters, and what the prevailing architectures behind many of these tools look like. It also introduces agentic AI and its relationship to Model Context Protocols (MCPs), along with references to other useful sources for readers who want to go deeper.
 
-Chapter Two focuses on applications of AI as a writing assistant. It covers best practices, practical guidance around prompt engineering, and concrete examples of usage.
+**Chapter Two** focuses on applications of AI as a writing assistant. It covers best practices, practical guidance around prompt engineering, and concrete examples of usage.
 
-Chapter Three explores how to use AI for programming, with particular attention to AI agents integrated into tools such as VS Code, Positron, and RStudio (by Posit). This chapter also takes a deeper dive into context in AI and how to make the most of it in technical workflows.
+**Chapter Three** explores how to use AI for programming, with particular attention to AI agents integrated into tools such as VS Code, Positron, and RStudio (by Posit). This chapter also takes a deeper dive into context in AI and how to make the most of it in technical workflows.
 
-Chapter Four is dedicated to agentic AI using Claude and GitHub Copilot, which, in my personal opinion, are among the most transformative tools currently available. This chapter includes live examples drawn from my own projects, including cases where things did not work as expected.
+**Chapter Four** is dedicated to agentic AI using Claude and GitHub Copilot, which, in my personal opinion, are among the most transformative tools currently available. This chapter includes live examples drawn from my own projects, including cases where things did not work as expected.
 
-Chapter Five broadens the scope with additional examples of AI in other contexts, including how to leverage AI to evaluate your own writing—for example, reviewing something as high-stakes as an NIH grant.
+**Chapter Five** broadens the scope with additional examples of AI in other contexts, including how to leverage AI to evaluate your own writing—for example, reviewing something as high-stakes as an NIH grant.
 
-Finally, Chapter Six introduces more advanced applications, focusing on how to use AI programmatically through tools such as Ollama and other open-source frameworks.
+Finally, **Chapter Six** introduces more advanced applications, focusing on how to use AI programmatically through tools such as Ollama and other open-source frameworks.
 
 This structure reflects both the rapid evolution of the field and my own ongoing effort to understand it. The goal is not to predict the future, but to engage with the present—carefully, critically, and practically.

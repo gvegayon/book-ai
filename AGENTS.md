@@ -81,3 +81,5 @@ This book is built with Quarto. Chapters are `.qmd` files. When editing:
 - Preserve YAML frontmatter (`date`, `date-modified`, etc.)
 - Use proper Quarto callout syntax for notes, warnings, etc.
 - Test that any code chunks render correctly if applicable
+- If adding chapters, ensure that the corresponding lines in `_quarto.yaml` are edited.
+- When updating a chapter, ensure you update the `date-modified` entry in the header (and add one if missing).

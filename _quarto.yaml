@@ -32,7 +32,13 @@ book:
 
   chapters: 
     - index.qmd
-    - 01-intro.qmd
+    - 00-intro.qmd
+    - 01-overview-of-ai.qmd
+    - 02-writing-assistant.qmd
+    - 03-programming-ai.qmd
+    - 04-agentic-ai.qmd
+    - 05-evaluating-writing.qmd
+    - 06-programmatic-ai.qmd
   appendices:
     - references.qmd
     - news.qmd

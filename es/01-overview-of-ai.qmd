@@ -1,0 +1,73 @@
+---
+date: 2026-02-19
+date-modified: 2026-02-19
+---
+
+# Revisión General de la IA
+
+::: {.callout-note title="Versión IA"}
+Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
+:::
+
+La Inteligencia Artificial es un término amplio y, en ocasiones, sobrecargado de significados. Desde una perspectiva técnica, la IA se refiere a sistemas computacionales que realizan tareas que se asemejan a la toma de decisiones. Bajo esta definición, la IA no se limita a robots humanoides ni a sistemas conversacionales. Un modelo de regresión que estima la probabilidad de un evento es IA. Una red neuronal que clasifica una imagen como perro o gato es IA. Y lo que la mayoría de las personas asocia hoy con la IA —los "chats inteligentes" que generan respuestas de texto— también es IA. La diferencia no radica en si son inteligentes, sino en cómo están construidos y para qué están diseñados.
+
+Sin embargo, en los últimos años, una familia particular de modelos ha dominado la conversación: los Large Language Models.
+
+
+## Large Language Models
+
+El avance más visible en la IA contemporánea ha provenido de los Large Language Models (LLMs). Estos son modelos probabilísticos construidos sobre una arquitectura específica de redes neuronales —los transformers— y entrenados en conjuntos de datos de dimensiones extraordinarias. El principio central que los sustenta es conceptualmente simple: dada una secuencia de texto `x`, ¿cuál es la siguiente palabra más probable?
+
+Esta tarea de predicción de la siguiente palabra, repetida miles de millones de veces durante el entrenamiento, produce un comportamiento sorprendentemente poderoso. Al aprender patrones estadísticos del lenguaje a gran escala, los LLMs adquieren la capacidad de resumir, traducir, escribir código, responder preguntas y simular razonamiento. Es importante destacar que no están recuperando respuestas fijas de una base de datos, sino que generan respuestas token por token, muestreando distribuciones de probabilidad condicionadas a la entrada.
+
+No todos los LLMs son iguales. Más allá de las diferencias en los datos de entrenamiento y el tamaño del modelo, una distinción importante es cuánto *contexto* pueden manejar. El contexto se refiere a cuánta información —conversación previa, documentos, instrucciones— el modelo puede tomar en cuenta a la vez al generar una respuesta.
+
+### El Papel del Contexto
+
+La calidad del resultado de un LLM depende de manera crítica de la entrada que recibe. Pensémoslo así: ¿cuánto esperaríamos que un completo desconocido respondiera correctamente una pregunta técnica si le proporcionamos casi ninguna información de contexto? La misma lógica aplica a los LLMs. Cuanto más contexto relevante se proporcione, mejor será la respuesta.
+
+Por eso se recomienda frecuentemente especificar roles o restricciones. Por ejemplo:
+
+> "Eres un estadístico experto especializado en ensayos controlados aleatorizados."
+
+Al hacer esto, se está moldeando la distribución de posibles respuestas. Sin esta orientación, la respuesta del modelo reflejará una mezcla de patrones aprendidos en todos sus datos de entrenamiento —un promedio de muchos dominios y estilos.
+
+Otra forma útil de pensar en los LLMs es mediante una analogía bayesiana. Imaginemos que un LLM tiene una prior extremadamente amplia y difusa —que abarca esencialmente grandes porciones del conocimiento humano registrado. Cuando se proporciona un prompt, se está condicionando sobre nueva evidencia. Si el prompt es vago, la distribución posterior sigue siendo difusa y el modelo producirá una respuesta genérica y "promedio". Si se proporciona contexto específico, se estrecha la posterior y se restringe el espacio de muestreo.
+
+Esto plantea una pregunta natural: ¿cuánto contexto se debe proporcionar?
+
+La respuesta depende del objetivo. Si se busca precisión, hay que proporcionar todo el contexto relevante posible. Cuanto más estrecha sea la información de condicionamiento, más específico y confiable tiende a ser el resultado. Sin embargo, si el objetivo es la creatividad —usar el LLM como caja de resonancia para nuevas ideas— restringir demasiado el modelo puede reducir la novedad. En términos bayesianos, una función de verosimilitud demasiado ajustada limita la exploración. Un espacio de búsqueda ligeramente más amplio puede producir resultados más inesperados y, en ocasiones, más interesantes.
+
+Comprender este balance entre precisión y creatividad es esencial para usar los LLMs de forma efectiva.
+
+## IA Agéntica
+
+Si bien los LLMs transformaron la manera en que interactuamos con la IA, el siguiente gran cambio ha venido de lo que suele denominarse *IA agéntica*. Si los LLMs hicieron la IA conversacional, los sistemas agénticos la están haciendo ejecutable.
+
+Al inicio del reciente auge de la IA, muchos usuarios recurrieron a modelos como ChatGPT para obtener ayuda con código. Los resultados fueron irregulares, en el mejor de los casos. A menos que la tarea fuera muy simple, el código generado solía fallar —a veces sintácticamente, a veces lógicamente, y en ocasiones de formas más sutiles. Peor aún, los modelos inventaban funcionalidades inexistentes con total confianza.
+
+Lo experimenté directamente. Un usuario del paquete `netdiffuseR` de R me escribió diciéndome que ChatGPT le había informado sobre un algoritmo publicado por ciertos autores y afirmaba que mi paquete incluía una viñeta que lo demostraba. El usuario no podía encontrarla. La razón era simple: no existía. El modelo había fabricado una referencia plausible pero falsa.
+
+Este comportamiento —frecuentemente denominado "alucinación"— era una limitación fundamental de los primeros despliegues de LLMs. El modelo podía generar texto que *sonaba* correcto, pero no disponía de ningún mecanismo para verificar sus afirmaciones.
+
+### De Modelos Estáticos a Agentes Activos
+
+Con la introducción de frameworks como el Model Context Protocol (MCP) de Anthropic, los LLMs adquirieron la capacidad de moverse más allá de la ventana de chat. En lugar de simplemente proponer código, un agente podía ejecutarlo, observar el resultado e iterar si fallaba. La idea es directa pero poderosa: darle al modelo una herramienta para probar su propio resultado.
+
+Si el código no funciona, el agente recibe retroalimentación y lo revisa. Este ciclo —proponer, ejecutar, evaluar, revisar— mejora drásticamente el rendimiento. En la práctica, esto transformó a los asistentes de código de generadores de texto ocasionalmente útiles en herramientas capaces de producir scripts funcionales.
+
+El mismo principio se aplica más allá de la programación. Otro avance importante fue permitir que los modelos realizasen búsquedas en la web. Antes de la integración de herramientas, los LLMs estaban limitados a sus datos de entrenamiento. Una vez conectados a herramientas de búsqueda y navegación a través de MCPs, podían recuperar información actualizada.
+
+Desde una perspectiva investigativa, esto fue transformador. Al preguntar sobre artículos recientes, los modelos ahora pueden devolver manuscritos reales en lugar de citas fabricadas. Dicho esto, persiste una advertencia: aunque el artículo en sí puede ser real, los resúmenes o interpretaciones aún pueden ser inexactos. El acceso a herramientas reduce las alucinaciones, pero no elimina la necesidad de verificación.
+
+### Interactuando con el Mundo
+
+La evolución de la IA agéntica ha continuado con sistemas capaces de interactuar directamente con entornos locales. Proyectos de código abierto como OpenClaw extendieron la idea del MCP aún más, permitiendo que los agentes se ejecuten localmente en lugar de exclusivamente en la nube. A través de mecanismos como las "habilidades de agente" definidas (p. ej., `skills.md`), estos sistemas ofrecen formas estructuradas para que los modelos interactúen con correo electrónico, calendarios, archivos y otros recursos informáticos.
+
+Este cambio —de la generación pasiva de texto a la interacción activa con sistemas— marca un cambio cualitativo. Los sistemas de IA ya no están confinados a responder preguntas; ahora pueden realizar tareas, coordinar flujos de trabajo e integrarse con entornos personales y profesionales.
+
+---
+
+En resumen, el panorama actual de la IA está moldeado por dos desarrollos entrelazados: los Large Language Models, que generan resultados notablemente fluidos y flexibles, y los frameworks agénticos, que permiten a esos modelos actuar, probar, recuperar e iterar. Entender ambos es esencial. Los LLMs explican por qué la IA puede hablar. Los sistemas agénticos explican por qué la IA ahora puede hacer.
+
+Juntos, definen la frontera actual de la inteligencia artificial.

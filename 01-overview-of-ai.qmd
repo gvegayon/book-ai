@@ -1,0 +1,73 @@
+---
+date: 2026-02-19
+date-modified: 2026-02-19
+---
+
+# Overview of AI
+
+::: {.callout-note title="AI version"}
+This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
+:::
+
+Artificial Intelligence is a broad and, at times, overloaded term. From a technical perspective, AI refers to computational systems that perform tasks that resemble decision-making. Under this definition, AI is not limited to humanoid robots or conversational systems. A regression model that estimates the probability of an event is AI. A neural network that classifies an image as a dog or a cat is AI. And what most people now associate with AI—“smart chats” that generate text responses—is also AI. The difference lies not in whether they are intelligent, but in how they are built and what they are designed to do.
+
+In recent years, however, one particular family of models has dominated the conversation: Large Language Models.
+
+
+## Large Language Models
+
+The most visible breakthrough in contemporary AI has come from Large Language Models (LLMs). These are probabilistic models built on a specific neural network architecture—transformers—and trained on extremely large datasets. The core principle behind them is conceptually simple: given a sequence of text `x`, what is the most likely next word?
+
+This next-word prediction task, repeated billions of times during training, leads to surprisingly powerful behavior. By learning statistical patterns in language at scale, LLMs acquire the ability to summarize, translate, write code, answer questions, and simulate reasoning. Importantly, they are not retrieving fixed answers from a database. They are generating responses token by token, sampling from probability distributions conditioned on the input.
+
+Not all LLMs are equal. Beyond differences in training data and model size, one major distinction is how much *context* they can handle. Context refers to how much information—previous conversation, documents, instructions—the model can take into account at once when generating a response.
+
+### The Role of Context
+
+The quality of an LLM’s output depends critically on the input it receives. Think of it this way: how much would you expect a complete stranger to correctly answer a technical question if you provide almost no background information? The same logic applies to LLMs. The more relevant context you provide, the better the response is likely to be.
+
+This is why users are often advised to specify roles or constraints. For example:
+
+> "You are an expert statistician specializing in randomized controlled trials."
+
+By doing this, you are shaping the distribution of possible answers. Without such guidance, the model’s response will reflect a blend of patterns learned across its entire training data—an average over many domains and styles.
+
+Another useful way to think about LLMs is through a Bayesian analogy. Imagine that an LLM has an extremely broad and fuzzy prior—essentially encompassing large portions of recorded human knowledge. When you provide a prompt, you are conditioning on new evidence. If your prompt is vague, the posterior distribution remains diffuse, and the model will produce a generic, “average” response. If you provide specific context, you narrow the posterior and constrain the sampling space.
+
+This raises a natural question: how much context should you provide?
+
+The answer depends on your goal. If you want precision, provide as much relevant context as possible. The narrower the conditioning information, the more targeted and reliable the output tends to be. However, if your objective is creativity—using the LLM as a sounding board for new ideas—over-constraining the model can reduce novelty. In Bayesian terms, an overly tight likelihood function limits exploration. A slightly broader search space can produce more unexpected, and sometimes more interesting, results.
+
+Understanding this trade-off between precision and creativity is essential to using LLMs effectively.
+
+## Agentic AI
+
+While LLMs transformed how we interact with AI, the next major shift has come from what is often called *Agentic AI*. If LLMs made AI conversational, agentic systems are making AI actionable.
+
+At the beginning of the recent AI surge, many users turned to models like ChatGPT for coding help. The results were mixed at best. Unless the task was very simple, the generated code often failed—sometimes syntactically, sometimes logically, and occasionally in more subtle ways. Worse, the models would confidently invent functionality that did not exist.
+
+I experienced this directly. A user of the `netdiffuseR` R package once wrote to me saying that ChatGPT had informed them of an algorithm published by certain authors and claimed that my package included a vignette demonstrating it. The user could not find it. The reason was simple: it did not exist. The model had fabricated a plausible but false reference.
+
+This behavior—often referred to as “hallucination”—was a fundamental limitation of early LLM deployments. The model could generate text that *sounded* correct, but it had no mechanism to verify its claims.
+
+### From Static Models to Acting Agents
+
+With the introduction of frameworks such as Anthropic’s Model Context Protocol (MCP), LLMs gained the ability to move beyond the chat window. Instead of merely proposing code, an agent could execute it, observe the result, and iterate if it failed. The idea is straightforward but powerful: give the model a tool to test its own output.
+
+If the code does not run, the agent receives feedback and revises it. This loop—propose, execute, evaluate, revise—dramatically improves performance. In practice, this transformed coding assistants from occasionally helpful text generators into tools that can produce working scripts.
+
+The same principle applies beyond coding. Another major advance came with enabling models to search the web. Before tool integration, LLMs were constrained to their training data. Once connected to search and browsing tools via MCPs, they could retrieve up-to-date information.
+
+From a research perspective, this was transformative. When asking about recent papers, models can now return actual manuscripts rather than fabricated citations. That said, a caveat remains: while the paper itself may be real, summaries or interpretations can still be inaccurate. Tool access reduces hallucination but does not eliminate the need for verification.
+
+### Interacting with the World
+
+The evolution of agentic AI has continued with systems that can interact directly with local environments. Open-source projects such as OpenClaw extended the MCP idea further by allowing agents to run locally rather than exclusively in the cloud. Through mechanisms like defined “agent skills” (e.g., `skills.md`), these systems provide structured ways for models to interact with email, calendars, files, and other computer resources.
+
+This shift—from passive text generation to active system interaction—marks a qualitative change. AI systems are no longer confined to answering questions; they can now perform tasks, coordinate workflows, and integrate with personal and professional environments.
+
+---
+
+In summary, today’s AI landscape is shaped by two intertwined developments: Large Language Models that generate remarkably fluent and flexible outputs, and agentic frameworks that allow those models to act, test, retrieve, and iterate. Understanding both is essential. LLMs explain why AI can speak. Agentic systems explain why AI can now do.
+
+Together, they define the current frontier of artificial intelligence.
