@@ -3,4 +3,38 @@ date: 2026-02-19
 date-modified: 2026-02-19
 ---
 
-# AI as a Writing Assistant
+# AI as a Writing Assistant  
+
+::: {.callout-note title="AI version"}
+This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
+:::
+
+## Creating Original Text  
+
+One of the most widespread uses of AI today is writing. For better or worse, AI-generated text is now everywhere—even in chapters like this one. The real question is not whether AI was involved, but how much it influenced the writing. Did the AI generate an entire chapter from a prompt such as “write me a chapter about writing with AI”? Or did it simply organize ideas that were already clearly formulated by the author, as I am attempting to do here?
+
+::: {.callout-note}
+You can see the original discussion I had with the AI to generate this chapter here: https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed. You can also see it in [02-writing-assistant-draft.md](02-writing-assistant-draft.md).
+:::
+
+Large language models (LLMs) are designed to generate text. That is their core function. The quality of that text, however, is a separate matter. Over time, the grammar and fluency of AI-generated writing have improved significantly. What has not improved to the same degree is the reliability of the content. AI systems can still produce statements that are inaccurate or misleading. For that reason, it is essential that users carefully review anything an AI produces. The responsibility for accuracy remains with the author.
+
+Personally, I believe it is acceptable to use AI for writing anything. The ethical boundary, however, lies in authorship. The core ideas, the intellectual contribution, and the main arguments should originate from the human author. In addition, transparency about the role of AI in the writing process is important. This naturally leads to a practical concern: how can we ensure that AI is not generating new ideas on our behalf?
+
+In my experience, the solution is surprisingly simple. You explicitly instruct the AI not to create new ideas. For every text-generation task in which I use AI, I ask it to organize my ideas rather than expand upon them. This usually works well. I also begin the interaction by providing context and often end my prompt with a clear instruction such as, “Don’t do anything just yet.” This framing helps establish boundaries before the AI starts generating text.
+
+Problems tend to arise when users provide only a short, vague prompt. Ironically, those cases are often the easiest to detect. Text generated from minimal supervision frequently shares recognizable characteristics. It tends to be overly long, as AI systems attempt to integrate across multiple domains and err on the side of verbosity. When not written in a discursive style, it may rely excessively on bullet points. It may include emojis or unusual formatting. It often adopts an overly polished or excessively polite tone. When clear guardrails are set—when the AI is told precisely what it can and cannot do—these symptoms are largely absent.
+
+## Reviewing Text  
+
+Beyond drafting, AI can be extremely useful for reviewing text. For grammar specifically, my personal preference is Grammarly, a company based in Ukraine that provides an AI-powered writing assistant integrated into desktop and mobile platforms. Whether you are a native English speaker or an ESL writer, there is something to learn from it. I once discussed this with my PhD committee chair, Dr. Paul Marjoram. Paul, who was born and raised in the UK, already had excellent writing. Yet when he passed a short piece of text through Grammarly, the system identified improvements that even he found impressive.
+
+Context is always critical when using AI for review. Grammarly allows you to specify the intended audience and purpose of your text. With systems like ChatGPT, this context is provided through natural language. The more explicit you are about your goals, the better the output tends to be. For example, you might write: “The following text is oriented for a scientific journal in the field of social networks. You are an expert in exponential-family random graph models.” Clear instructions shape the quality and relevance of the feedback.
+
+When reviewing longer texts, there are different strategies. In my own work, I typically submit paragraphs or sections rather than an entire document at once. This keeps me in control of the revision process and limits the scope of potential edits. In some cases, however—such as grant proposals—it may be appropriate to provide the full set of materials. I have even asked AI to score a grant proposal. When preparing an NIH R21 grant (currently under review), I first asked three colleagues to provide feedback. After receiving their comments, I submitted the same material to ChatGPT, along with context about the funding call. I instructed it to assume the role of an NIH review panel and to be objective rather than polite. The strengths and weaknesses it identified were the same as those independently noted by my colleagues.
+
+Another particularly effective use of large language models is summarization. Although sometimes overlooked, this function can serve as a test of whether the AI truly understands what it is reviewing. Asking the system to provide a brief summary before offering feedback is, in my view, essential. This approach also applies to programming tasks, as will be discussed later. The key is again to be explicit: “Before you go on, please provide a summary of the text I am asking you to review.” If the summary is accurate, you can proceed with greater confidence.
+
+## Bottom Line  
+
+Using AI to create text can be appropriate and helpful, provided it serves to organize and clarify your thoughts rather than replace them. With sufficient context and clear instructions, AI can also be a powerful tool for reviewing and summarizing written work. The responsibility, however, remains with the author to ensure originality, accuracy, and transparency.

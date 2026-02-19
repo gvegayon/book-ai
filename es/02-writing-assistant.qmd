@@ -4,3 +4,37 @@ date-modified: 2026-02-19
 ---
 
 # IA como Asistente de Escritura
+
+::: {.callout-note title="Versión IA"}
+Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
+:::
+
+## Creación de Texto Original
+
+Uno de los usos más extendidos de la IA hoy en día es la escritura. Para bien o para mal, el texto generado por IA está en todas partes —incluso en capítulos como este. La pregunta real no es si la IA estuvo involucrada, sino cuánto influyó en la escritura. ¿Generó la IA el capítulo completo a partir de un prompt como "escríbeme un capítulo sobre escribir con IA"? ¿O simplemente organizó ideas que el autor ya tenía claramente formuladas, como intento hacer aquí?
+
+::: {.callout-note}
+Puedes ver la discusión original que tuve con la IA para generar este capítulo aquí: https://chatgpt.com/share/6996ba6a-6eb8-800d-a408-36ea28620eed.
+:::
+
+Los large language models (LLMs) están diseñados para generar texto. Esa es su función central. La calidad de ese texto, sin embargo, es una cuestión aparte. Con el tiempo, la gramática y la fluidez de la escritura generada por IA han mejorado significativamente. Lo que no ha mejorado en la misma medida es la fiabilidad del contenido. Los sistemas de IA aún pueden producir afirmaciones inexactas o engañosas. Por esa razón, es esencial que los usuarios revisen cuidadosamente todo lo que produce una IA. La responsabilidad sobre la precisión sigue recayendo en el autor.
+
+Personalmente, considero aceptable usar IA para escribir cualquier cosa. El límite ético, sin embargo, está en la autoría. Las ideas centrales, la contribución intelectual y los argumentos principales deben originarse en el autor humano. Además, la transparencia sobre el papel de la IA en el proceso de escritura es importante. Esto lleva naturalmente a una preocupación práctica: ¿cómo podemos asegurarnos de que la IA no esté generando nuevas ideas en nuestro nombre?
+
+En mi experiencia, la solución es sorprendentemente simple. Se le indica explícitamente a la IA que no cree ideas nuevas. En cada tarea de generación de texto en la que uso IA, le pido que organice mis ideas en lugar de ampliarlas. Esto generalmente funciona bien. También comienzo la interacción proporcionando contexto y suelo terminar mi prompt con una instrucción clara como "No hagas nada todavía". Este encuadre ayuda a establecer límites antes de que la IA comience a generar texto.
+
+Los problemas tienden a surgir cuando los usuarios proporcionan únicamente un prompt corto y vago. Irónicamente, esos casos suelen ser los más fáciles de detectar. El texto generado con supervisión mínima frecuentemente comparte características reconocibles. Tiende a ser excesivamente largo, ya que los sistemas de IA intentan integrar múltiples dominios y pecan de verbosidad. Cuando no está escrito en un estilo discursivo, puede recurrir en exceso a listas con viñetas. Puede incluir emojis o un formato inusual. A menudo adopta un tono excesivamente pulido o demasiado cortés. Cuando se establecen límites claros —cuando se le dice a la IA con precisión qué puede y qué no puede hacer— estos síntomas están en gran medida ausentes.
+
+## Revisión de Texto
+
+Más allá de la redacción, la IA puede ser extremadamente útil para revisar textos. Para gramática específicamente, mi preferencia personal es Grammarly, una empresa con sede en Ucrania que ofrece un asistente de escritura potenciado por IA integrado en plataformas de escritorio y móviles. Ya seas hablante nativo de inglés o un escritor con inglés como segundo idioma, siempre hay algo que aprender de él. Una vez hablé de esto con el director de mi comité doctoral, el Dr. Paul Marjoram. Paul, nacido y criado en el Reino Unido, ya tenía una escritura excelente. Sin embargo, cuando pasó un breve fragmento de texto por Grammarly, el sistema identificó mejoras que incluso él encontró impresionantes.
+
+El contexto es siempre fundamental cuando se usa IA para revisión. Grammarly permite especificar la audiencia y el propósito del texto. Con sistemas como ChatGPT, este contexto se proporciona mediante lenguaje natural. Cuanto más explícito seas sobre tus objetivos, mejor suele ser el resultado. Por ejemplo, podrías escribir: "El siguiente texto está orientado a una revista científica en el campo de las redes sociales. Eres un experto en modelos de grafos aleatorios de familia exponencial." Las instrucciones claras moldean la calidad y la relevancia de la retroalimentación.
+
+Al revisar textos más largos, existen diferentes estrategias. En mi propio trabajo, generalmente envío párrafos o secciones en lugar de un documento completo a la vez. Esto me mantiene en control del proceso de revisión y limita el alcance de las posibles ediciones. Sin embargo, en algunos casos —como propuestas de financiamiento— puede ser apropiado proporcionar el conjunto completo de materiales. Incluso le he pedido a la IA que evalúe una propuesta de financiamiento. Al preparar una solicitud NIH R21 (actualmente en revisión), primero pedí retroalimentación a tres colegas. Tras recibir sus comentarios, envié el mismo material a ChatGPT, junto con el contexto de la convocatoria de financiamiento. Le indiqué que asumiera el rol de un panel de revisión del NIH y que fuera objetivo en lugar de cortés. Las fortalezas y debilidades que identificó coincidían con las señaladas de forma independiente por mis colegas.
+
+Otro uso particularmente efectivo de los large language models es el resumen. Aunque a veces se pasa por alto, esta función puede servir como prueba de si la IA realmente comprende lo que está revisando. Pedirle al sistema un breve resumen antes de ofrecer retroalimentación es, en mi opinión, esencial. Este enfoque también aplica a las tareas de programación, como se discutirá más adelante. La clave es, de nuevo, ser explícito: "Antes de continuar, proporciona un resumen del texto que te pido que revises." Si el resumen es preciso, puedes proceder con mayor confianza.
+
+## Conclusión
+
+Usar IA para crear texto puede ser apropiado y útil, siempre que sirva para organizar y clarificar tus ideas en lugar de reemplazarlas. Con suficiente contexto e instrucciones claras, la IA también puede ser una herramienta poderosa para revisar y resumir trabajos escritos. La responsabilidad, sin embargo, sigue recayendo en el autor para garantizar la originalidad, la precisión y la transparencia.
