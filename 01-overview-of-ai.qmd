@@ -71,3 +71,14 @@ This shift—from passive text generation to active system interaction—marks a
 In summary, today’s AI landscape is shaped by two intertwined developments: Large Language Models that generate remarkably fluent and flexible outputs, and agentic frameworks that allow those models to act, test, retrieve, and iterate. Understanding both is essential. LLMs explain why AI can speak. Agentic systems explain why AI can now do.
 
 Together, they define the current frontier of artificial intelligence.
+
+## Practical Recommendations
+
+This chapter introduced two foundational concepts: how Large Language Models work by predicting the next token based on context, and how agentic AI extends their capabilities by connecting them to tools and environments. The following table offers practical recommendations that reinforce these ideas.
+
+| Goal | Do | Don't |
+|---|---|---|
+| **Provide context to get better responses** | Set a role and include relevant details: *"You are an expert statistician specializing in survival analysis. I need help interpreting a Kaplan-Meier curve from a clinical trial with 200 participants."* | Send a vague request with no background: *"Explain this data."* |
+| **Balance precision and creativity** | Match your prompt style to your goal. For factual answers: *"Describe the assumptions of a Cox proportional hazards model."* For brainstorming: *"Suggest five unconventional approaches to study urban mobility."* | Use the same generic prompting style for every task, regardless of whether you need accuracy or creative exploration. |
+| **Verify AI-generated claims** | Ask for verifiable references: *"List recent papers on network diffusion and provide DOIs so I can check them."* Then confirm the references exist. | Trust the output at face value: *"Tell me the key references in network diffusion"* and cite them without verification. |
+| **Use agentic AI for coding tasks** | Let the agent execute and iterate: *"Write a Python script that loads `data.csv`, computes summary statistics, and run it. Fix any errors."* | Copy-paste generated code without testing: *"Write a Python script for my analysis"* and use it directly in your project. |

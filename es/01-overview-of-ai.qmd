@@ -71,3 +71,14 @@ Este cambio —de la generación pasiva de texto a la interacción activa con si
 En resumen, el panorama actual de la IA está moldeado por dos desarrollos entrelazados: los Large Language Models, que generan resultados notablemente fluidos y flexibles, y los frameworks agénticos, que permiten a esos modelos actuar, probar, recuperar e iterar. Entender ambos es esencial. Los LLMs explican por qué la IA puede hablar. Los sistemas agénticos explican por qué la IA ahora puede hacer.
 
 Juntos, definen la frontera actual de la inteligencia artificial.
+
+## Recomendaciones Prácticas
+
+Este capítulo presentó dos conceptos fundamentales: cómo funcionan los Large Language Models prediciendo el siguiente token a partir del contexto, y cómo la IA agéntica amplía sus capacidades al conectarlos con herramientas y entornos. La siguiente tabla ofrece recomendaciones prácticas que refuerzan estas ideas.
+
+| Objetivo | Hacer | No hacer |
+|---|---|---|
+| **Proporcionar contexto para obtener mejores respuestas** | Establecer un rol e incluir detalles relevantes: *"Eres un estadístico experto especializado en análisis de supervivencia. Necesito ayuda para interpretar una curva de Kaplan-Meier de un ensayo clínico con 200 participantes."* | Enviar una solicitud vaga sin contexto: *"Explica estos datos."* |
+| **Equilibrar precisión y creatividad** | Adaptar el estilo del prompt al objetivo. Para respuestas factuales: *"Describe los supuestos de un modelo de riesgos proporcionales de Cox."* Para lluvia de ideas: *"Sugiere cinco enfoques no convencionales para estudiar la movilidad urbana."* | Usar el mismo estilo genérico de prompt para todas las tareas, sin importar si se necesita precisión o exploración creativa. |
+| **Verificar las afirmaciones generadas por IA** | Pedir referencias verificables: *"Enumera artículos recientes sobre difusión en redes y proporciona DOIs para que pueda verificarlos."* Luego confirmar que las referencias existen. | Confiar en el resultado sin comprobarlo: *"Dime las referencias clave en difusión en redes"* y citarlas sin verificación. |
+| **Usar IA agéntica para tareas de programación** | Permitir que el agente ejecute e itere: *"Escribe un script en Python que cargue `data.csv`, calcule estadísticas descriptivas y ejecútalo. Corrige cualquier error."* | Copiar y pegar código generado sin probarlo: *"Escribe un script en Python para mi análisis"* y usarlo directamente en tu proyecto. |

@@ -38,3 +38,14 @@ Another particularly effective use of large language models is summarization. Al
 ## Bottom Line  
 
 Using AI to create text can be appropriate and helpful, provided it serves to organize and clarify your thoughts rather than replace them. With sufficient context and clear instructions, AI can also be a powerful tool for reviewing and summarizing written work. The responsibility, however, remains with the author to ensure originality, accuracy, and transparency.
+
+## Practical Recommendations
+
+This chapter discussed how to use AI responsibly for writing and reviewing text. The key principles are: provide your own ideas, set clear boundaries, give context, and always verify the AI's understanding before proceeding. The following table summarizes these recommendations.
+
+| Goal | Do | Don't |
+|---|---|---|
+| **Set boundaries for text generation** | Provide your ideas and limit the AI's role: *"Here are my three main arguments. Organize them into a coherent paragraph. Do not add new ideas."* | Give a blank-slate prompt with no original input: *"Write me a paragraph about climate change and public health."* |
+| **Provide context for text review** | Specify the audience and purpose: *"This text is for a methods section in a public health journal. Review it for grammar and clarity."* | Send text with no context: *"Fix this text."* |
+| **Use summarization as a check** | Ask for a summary first: *"Before reviewing, summarize the main points of the text I just provided."* If the summary is accurate, proceed with confidence. | Jump straight to feedback: *"Review my text and suggest improvements"* without verifying the AI understood the content. |
+| **Review text in manageable pieces** | Submit sections individually: *"Review the following introduction paragraph for clarity and tone."* | Paste an entire document at once: *"Review my 20-page paper and fix everything."* |
