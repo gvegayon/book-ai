@@ -1,6 +1,177 @@
 ---
 date: 2026-02-19
-date-modified: 2026-02-19
+date-modified: 2026-02-23
 ---
 
 # IA para Programación
+
+::: {.callout-note title="Versión IA"}
+Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
+:::
+
+Hay muchas formas en las que podemos usar IA para programar: haciendo lo que algunos llaman *vibe coding*, apoyándose en el autocompletado, usando asistentes de IA para planificar y —mi favorita— asignando tareas a agentes de IA. Cada uno de estos modos representa un nivel diferente de involucramiento entre el humano y el modelo, y cada uno tiene sus propias fortalezas y limitaciones.
+
+No existe una fórmula secreta para programar eficazmente con IA. Recientemente, el líder del equipo de la herramienta de programación de Claude mencionó que no ha escrito una sola línea de código en los últimos cuatro meses. Aunque eso sería fantástico, quienes usan IA activamente para programar saben que no es tan sencillo. La IA puede ser extremadamente útil, pero no elimina la necesidad de juicio, estructura y supervisión.
+
+Por supuesto, cuando se trata de tareas simples —desplegar un sitio web, crear una interfaz de usuario o generar código de plantilla para análisis de datos— la IA puede ser sobresaliente. Pero eso se debe principalmente a que existen muchos ejemplos de estas tareas disponibles en línea. Cuando se trata de uso científico, sin embargo, mi impresión es que el desempeño no es tan sólido. Cuanto más especializado sea el método, el conjunto de datos o el marco de modelado, mayor cuidado debemos tener.
+
+En este capítulo ofreceré algunas pautas generales y buenas prácticas —las que funcionan para mí— para programar con IA. Nos centraremos en GitHub Copilot, que es uno de los conjuntos de herramientas más completos disponibles hoy en día.
+
+---
+
+## Fundamentos
+
+La clave para programar eficazmente con IA es el **contexto**.
+
+Siempre podemos hacerle a un asistente de IA o LLM preguntas sencillas como:
+
+> "Implementa una función para ejecutar el modelo XYZ."
+
+Pero la calidad de la respuesta depende en gran medida del contexto que el modelo tenga disponible.
+
+En programación, el contexto suele provenir de dos (o más) lugares.
+
+El primero es la **carpeta local** donde se ejecuta el análisis o el proyecto. A menos que estés empezando desde cero, casi siempre es mejor usar un agente de IA que tenga acceso a tu base de código local. Si usas GitHub Copilot dentro de VS Code, este toma esa información en cuenta automáticamente.
+
+El segundo es un conjunto explícito de instrucciones para tus agentes, normalmente proporcionado a través de un archivo `AGENTS.md`. Este sencillo archivo markdown se ha convertido en algo parecido a un estándar. El archivo `AGENTS.md` contiene las instrucciones generales que le proporcionas a tu agente. Los elementos típicos incluyen:
+
+- Una descripción general del proyecto
+- El rol previsto o el tipo de conocimiento del agente
+- Pautas de estilo de código
+- El flujo de trabajo habitual (por ejemplo, "siempre crea archivos de prueba usando el paquete XYZ" o "asegúrate de que el código se ejecute con este conjunto de datos de prueba")
+- Errores conocidos, problemas recurrentes o cosas que evitar
+
+Este último punto es especialmente importante porque generalmente refleja tu experiencia pasada. Con el tiempo, el archivo `AGENTS.md` permite que tu agente "evolucione", incorporando instrucciones que ayudan a prevenir errores repetidos.
+
+Cuando los agentes disponen de información contextual sólida, son mucho más eficaces para comprender lo que quieres lograr. Esto reduce la cantidad de detalles que necesitas proporcionar en cada prompt, ya que gran parte de la orientación ya reside en los archivos del proyecto.
+
+Una vez que tienes tanto un `AGENTS.md` como un `README.md` en su lugar, la mayoría de los agentes de IA —ya sea GitHub Copilot, ChatGPT Codex, Claude u otros— tienen suficiente información para proceder eficazmente.
+
+Para configurar GitHub Copilot, primero necesitas una cuenta de GitHub. Si tienes una dirección de correo electrónico `.edu`, puedes calificar para una cuenta premium gratuita que incluye Copilot. De lo contrario, el plan anual (la última vez que lo verifiqué) costaba alrededor de 100 USD.
+
+---
+
+## Pedir a la IA que Genere Código
+
+Como se mencionó en capítulos anteriores, los sistemas de IA han mejorado significativamente en la generación de código funcional. Aun así, enfrentan limitaciones —muchas de las cuales se asemejan a las de un asistente de investigación humano:
+
+1. Código, modelos o campos especializados con pocos ejemplos públicos
+2. Tareas demasiado complicadas (funciona mejor con fragmentos más pequeños)
+3. Tareas que requieren entornos o configuraciones complejas
+
+En estas situaciones, es mejor pedirle a la IA que implemente las funcionalidades de forma **modular** y, si es posible, que las pruebe contra expectativas conocidas.
+
+Por ejemplo, en lugar de pedir:
+
+> "Analiza mis datos."
+
+Podrías pedir:
+
+> "Escribe código para crear una tabla con estas características. Aquí hay algunas filas de ejemplo del conjunto de datos."
+
+Proporcionar estructura y expectativas claras mejora la fiabilidad.
+
+Dicho esto, pedir código directamente de forma conversacional no es el uso más eficiente de la IA. Esta es una de las razones por las que OpenAI creó ChatGPT Codex y por las que otros proveedores están invirtiendo fuertemente en flujos de trabajo agénticos. La verdadera ventaja proviene de la **IA Agéntica**.
+
+Antes de llegar a eso, sin embargo, veamos el autocompletado de código.
+
+---
+
+## Autocompletado de Código
+
+Con el autocompletado, la IA te ayuda a escribir código más rápido prediciendo lo que estás a punto de escribir.
+
+Esta funcionalidad funciona mejor cuando ya tienes una base de código. En ese caso, el contexto incluye todos los ejemplos anteriores que has escrito. Algunas de las situaciones donde encuentro esto más útil incluyen:
+
+- Empezar una nueva función
+- Renombrar variables de forma consistente
+- Extender patrones existentes en el código
+
+La velocidad del autocompletado generalmente se puede ajustar (sugerencias más rápidas o más lentas), y tanto VS Code como RStudio admiten esta funcionalidad.
+
+En mi experiencia, el autocompletado funciona mejor en una **base de código madura**, donde múltiples scripts y convenciones consistentes le dan a la IA señales contextuales sólidas.
+
+---
+
+## Planificación
+
+Una funcionalidad más reciente y muy útil es el **modo de planificación**.
+
+Puede que no siempre confíes en que la IA escriba código perfecto directamente. Sin embargo, puede ser extremadamente útil para planificar cambios. Por ejemplo:
+
+- Implementar una nueva funcionalidad
+- Refactorizar un módulo existente
+- Reorganizar una base de código grande
+
+Cuando el número de líneas a cambiar se vuelve grande, revisar las ediciones generadas por IA puede resultar abrumador. En lugar de pedir una implementación directa, puedes solicitar un plan.
+
+En el modo de planificación, la IA crea una lista de verificación de los pasos necesarios para implementar el cambio. Esto te ayuda a:
+
+- Comprender el alcance de la tarea
+- Dividirla en componentes manejables
+- Mantener el control sobre el proceso de implementación
+
+El modo de planificación es especialmente útil cuando la tarea es demasiado compleja para delegarla ciegamente a un agente.
+
+---
+
+## Modo Agente
+
+El modo agente es uno de los desarrollos más poderosos en las herramientas de programación con IA. Va más allá de la conversación y comienza a *hacer cosas* realmente.
+
+En su forma más simple, el modo agente permite a la IA escribir código y probarlo. En lugar de limitarse a producir código que "cree" que funciona, el agente puede ejecutarlo, detectar errores e iterar antes de devolver un resultado.
+
+Los agentes modernos típicamente:
+
+1. Comienzan con un plan
+2. Dividen la tarea en subtareas (a veces usando subagentes)
+3. Implementan el código
+4. Crean datos sintéticos o archivos de prueba
+5. Ejecutan el código
+6. Revisan si se detectan errores
+
+Esto mejora drásticamente la fiabilidad.
+
+En GitHub Copilot (desde dentro de VS Code), puedes hacerle una pregunta a la IA, proporcionar contexto adicional (como archivos específicos) y elegir si ejecutar el agente en primer o segundo plano. El agente puede modificar código, generar pruebas e intentar validar su propio resultado.
+
+Este es un gran avance en comparación con la programación simple de pregunta y respuesta.
+
+---
+
+## Modo Agente (Nube)
+
+La versión en la nube del modo agente es incluso más poderosa.
+
+En lugar de usar tus recursos computacionales locales, la IA envía la tarea a un entorno en la nube y crea un Pull Request (PR) para ti. Ver al agente ejecutar código en línea es impresionante. Ahorra recursos locales y fomenta una formulación más clara del problema.
+
+En el modo agente en la nube de GitHub:
+
+- Se crea una nueva sesión de cómputo
+- El entorno puede preconfigurarse con las dependencias requeridas
+- Todo el proceso es visible para el usuario
+- El resultado final se envía como un Pull Request
+
+Dependiendo de la complejidad, los agentes tardan generalmente unos diez minutos o menos en completar una tarea y enviar un PR.
+
+Sin embargo, hay una nota de cautela importante: es tentador ejecutar muchos agentes simultáneamente. Pero el humano sigue en el ciclo. Alguien todavía necesita revisar el código cuidadosamente antes de fusionarlo.
+
+El proceso de revisión es una de las mayores ventajas de los agentes en la nube. La interfaz de GitHub te permite:
+
+- Agregar comentarios línea por línea
+- Proporcionar un comentario de resumen general
+- Etiquetar al agente (por ejemplo, `@copilot`) con instrucciones adicionales
+
+Esta revisión estructurada ocurre *antes* de que el código se fusione en la rama principal, lo cual no siempre es el caso con los agentes locales que modifican archivos directamente.
+
+Mi flujo de trabajo habitual es:
+
+1. Agregar comentarios específicos a lo largo del PR
+2. Proporcionar un comentario general claro con pautas
+3. Mencionar `@copilot` en el comentario de resumen
+4. Opcionalmente, pedirle a la IA que mejore el archivo `AGENTS.md` si aparecen problemas recurrentes
+
+Este último paso es importante. Con el tiempo, mejorar el `AGENTS.md` hace que tus agentes estén mejor alineados con tus expectativas y reduce los errores repetidos.
+
+---
+
+La IA para programación no se trata de reemplazar al desarrollador. Se trata de redefinir el flujo de trabajo. Las herramientas son poderosas —pero solo cuando el contexto es sólido, las instrucciones son claras y el humano permanece activamente involucrado en el proceso.

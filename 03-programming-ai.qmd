@@ -1,6 +1,177 @@
 ---
 date: 2026-02-19
-date-modified: 2026-02-19
+date-modified: 2026-02-22
 ---
 
 # AI for Programming
+
+::: {.callout-note title="AI version"}
+This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
+:::
+
+There are many ways in which we can use AI for coding: doing what some call *vibe coding*, relying on autocompletion, using AI assistants for planning, and—my favorite—assigning tasks to AI agents. Each of these modes represents a different level of involvement between the human and the model, and each has its own strengths and limitations.
+
+There is no secret formula for coding effectively with AI. Recently, the lead of Claude’s coding tool mentioned that he has not written a line of code in the last four months or so. Although that would be fantastic, people who are actively using AI for coding know it is not that simple. AI can be extremely helpful, but it does not remove the need for judgment, structure, and oversight.
+
+Sure, when you are implementing simple tasks—deploying a website, creating a UI, or generating template code for data analysis—AI can be outstanding. But that is mostly because there are many examples of these tasks available online. When it comes to scientific usage, however, my impression is that the performance is not as strong. The more niche the method, the dataset, or the modeling framework, the more careful we need to be.
+
+In this chapter, I will provide some general guidelines and best practices—the ones that work for me—for coding with AI. We will focus on GitHub Copilot, which is one of the most complete toolkits available today.
+
+---
+
+## Fundamentals
+
+The key to effective coding with AI is **context**.
+
+We can always ask an AI assistant or LLM simple questions such as:
+
+> “Implement a function to run model XYZ.”
+
+But the quality of the response depends heavily on the context the model has available.
+
+In coding, context usually comes from two (or more) places.
+
+The first is the **local folder** where the analysis or project is being executed. Unless you are starting from scratch, it is almost always better to use an AI agent that has access to your local codebase. If you are using GitHub Copilot inside VS Code, it automatically takes that information into account.
+
+The second is an explicit set of instructions for your agents, typically provided through an `AGENTS.md` file. This simple markdown file has become something of a standard. The `AGENTS.md` file contains general instructions you provide to your agent. Typical elements include:
+
+- An overall description of the project  
+- The intended role or knowledge type of the agent  
+- Coding style guidelines  
+- The usual workflow (e.g., “always create test files using package XYZ” or “ensure the code runs using this test dataset”)  
+- Known errors, pitfalls, or things to avoid  
+
+This last part is particularly important because it usually reflects your past experience. Over time, the `AGENTS.md` file allows your agent to “evolve,” incorporating instructions that help prevent repeated mistakes.
+
+When agents have strong contextual information, they are much better at understanding what you want to achieve. This reduces the amount of detail you need to provide in each prompt, since much of the guidance already lives in your project files.
+
+Once you have both an `AGENTS.md` and a `README.md` in place, most AI agents—whether GitHub Copilot, ChatGPT Codex, Claude, or others—have enough information to proceed effectively.
+
+To set up GitHub Copilot, you first need a GitHub account. If you have an `.edu` email address, you may qualify for a free premium account that includes Copilot. Otherwise, the annual plan (last time I checked) was around 100 USD.
+
+---
+
+## Asking the AI to Generate Code
+
+As mentioned in earlier chapters, AI systems have become significantly better at generating code that works. Still, they face limitations—many of which resemble those of a human research assistant:
+
+1. Niche code, models, or fields with few public examples  
+2. Overly complicated tasks (smaller chunks work better)  
+3. Tasks that require complex environments or configurations  
+
+In these situations, it is better to ask the AI to implement features in a **modular way** and, if possible, test them against known expectations.
+
+For example, instead of asking:
+
+> “Analyze my data.”
+
+You could ask:
+
+> “Write code to create a table with these characteristics. Here are a few example rows of the dataset.”
+
+Providing structure and clear expectations improves reliability.
+
+That said, directly asking for code in a conversational way is not the most efficient use of AI. This is one reason why OpenAI created ChatGPT Codex and why other providers are investing heavily in agentic workflows. The real advantage comes from **Agentic AI**.
+
+Before getting there, however, let us look at code completion.
+
+---
+
+## Code Completion
+
+With code completion, AI helps you write code faster by predicting what you are about to type.
+
+This feature works best when you already have a codebase. In that case, the context includes all the previous examples you have written. Some of the situations where I find this most useful include:
+
+- Starting a new function  
+- Renaming variables consistently  
+- Extending existing patterns in the code  
+
+The speed of code completion can usually be adjusted (faster or slower suggestions), and both VS Code and RStudio support this functionality.
+
+In my experience, code completion performs best in a **mature codebase**, where multiple scripts and consistent conventions give the AI strong contextual signals.
+
+---
+
+## Planning
+
+A newer and very useful feature is **planning mode**.
+
+You may not always trust the AI to write perfect code directly. However, it can be extremely helpful when planning changes. For example:
+
+- Implementing a new feature  
+- Refactoring an existing module  
+- Reorganizing a large codebase  
+
+When the number of lines to change becomes large, reviewing AI-generated edits can become overwhelming. Instead of asking for direct implementation, you can request a plan.
+
+In planning mode, the AI creates a checklist of the steps required to implement the change. This helps you:
+
+- Understand the scope of the task  
+- Break it into manageable components  
+- Maintain control over the implementation process  
+
+Planning mode is particularly useful when the task is too complex to hand off blindly to an agent.
+
+---
+
+## Agent Mode
+
+Agent mode is one of the most powerful developments in AI coding tools. It goes beyond conversation and starts actually *doing things*.
+
+In its simplest form, agent mode allows the AI to write code and test it. Instead of merely producing code that it “thinks” works, the agent can execute it, detect bugs, and iterate before returning a result.
+
+Modern agents typically:
+
+1. Start with a plan  
+2. Break the task into subtasks (sometimes using subagents)  
+3. Implement the code  
+4. Create synthetic data or test files  
+5. Execute the code  
+6. Revise if errors are detected  
+
+This dramatically improves reliability.
+
+In GitHub Copilot (from within VS Code), you can ask the AI a question, provide additional context (such as specific files), and choose whether to run the agent in the foreground or background. The agent may modify code, generate tests, and attempt to validate its own output.
+
+This is a major step forward compared to simple prompt-and-response coding.
+
+---
+
+## Agent Mode (Cloud)
+
+The cloud version of agent mode is even more powerful.
+
+Instead of using your local computational resources, the AI submits the task to a cloud environment and creates a Pull Request (PR) for you. Watching the agent run code online is impressive. It saves local resources and encourages clearer problem formulation.
+
+In GitHub’s cloud agent mode:
+
+- A new compute session is created  
+- The environment can be preconfigured with required dependencies  
+- The entire process is visible to the user  
+- The final output is submitted as a Pull Request  
+
+Depending on complexity, agents typically take about ten minutes or less to complete a task and submit a PR.
+
+There is, however, an important note of caution: it is tempting to run many agents simultaneously. But the human remains in the loop. Someone still needs to review the code carefully before merging it.
+
+The review process is one of the strongest advantages of cloud agents. GitHub’s interface allows you to:
+
+- Add line-by-line comments  
+- Provide an overall summary comment  
+- Tag the agent (e.g., `@copilot`) with additional instructions  
+
+This structured review happens *before* the code is merged into the main branch, which is not always the case with local agents that directly modify files.
+
+My usual workflow is:
+
+1. Add specific comments throughout the PR  
+2. Provide a clear overall comment with guidelines  
+3. Mention `@copilot` in the summary comment  
+4. Optionally ask the AI to improve the `AGENTS.md` file if recurring issues appear  
+
+This final step is important. Over time, improving `AGENTS.md` makes your agents better aligned with your expectations and reduces repeated mistakes.
+
+---
+
+AI for programming is not about replacing the developer. It is about redefining the workflow. The tools are powerful—but only when context is strong, instructions are clear, and the human remains actively engaged in the process.
