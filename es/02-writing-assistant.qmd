@@ -38,3 +38,14 @@ Otro uso particularmente efectivo de los large language models es el resumen. Au
 ## Conclusión
 
 Usar IA para crear texto puede ser apropiado y útil, siempre que sirva para organizar y clarificar tus ideas en lugar de reemplazarlas. Con suficiente contexto e instrucciones claras, la IA también puede ser una herramienta poderosa para revisar y resumir trabajos escritos. La responsabilidad, sin embargo, sigue recayendo en el autor para garantizar la originalidad, la precisión y la transparencia.
+
+## Recomendaciones Prácticas
+
+Este capítulo abordó cómo usar la IA de forma responsable para escribir y revisar texto. Los principios clave son: aportar tus propias ideas, establecer límites claros, proporcionar contexto y siempre verificar que la IA comprende el contenido antes de continuar. La siguiente tabla resume estas recomendaciones.
+
+| Objetivo | Hacer | No hacer |
+|---|---|---|
+| **Establecer límites para la generación de texto** | Proporcionar tus ideas y limitar el rol de la IA: *"Aquí están mis tres argumentos principales. Organízalos en un párrafo coherente. No agregues ideas nuevas."* | Dar un prompt sin contenido original: *"Escríbeme un párrafo sobre cambio climático y salud pública."* |
+| **Proporcionar contexto para la revisión de texto** | Especificar la audiencia y el propósito: *"Este texto es para la sección de métodos de una revista de salud pública. Revísalo en cuanto a gramática y claridad."* | Enviar texto sin contexto: *"Corrige este texto."* |
+| **Usar el resumen como verificación** | Pedir un resumen primero: *"Antes de revisar, resume los puntos principales del texto que acabo de proporcionarte."* Si el resumen es preciso, proceder con confianza. | Ir directamente a la retroalimentación: *"Revisa mi texto y sugiere mejoras"* sin verificar que la IA comprendió el contenido. |
+| **Revisar texto en porciones manejables** | Enviar secciones individualmente: *"Revisa el siguiente párrafo de introducción en cuanto a claridad y tono."* | Pegar un documento completo de una vez: *"Revisa mi artículo de 20 páginas y corrige todo."* |
