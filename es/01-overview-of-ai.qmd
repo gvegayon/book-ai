@@ -46,13 +46,13 @@ Si bien los LLMs transformaron la manera en que interactuamos con la IA, el sigu
 
 Al inicio del reciente auge de la IA, muchos usuarios recurrieron a modelos como ChatGPT para obtener ayuda con código. Los resultados fueron irregulares, en el mejor de los casos. A menos que la tarea fuera muy simple, el código generado solía fallar —a veces sintácticamente, a veces lógicamente, y en ocasiones de formas más sutiles. Peor aún, los modelos inventaban funcionalidades inexistentes con total confianza.
 
-Lo experimenté directamente. Un usuario del paquete `netdiffuseR` de R me escribió diciéndome que ChatGPT le había informado sobre un algoritmo publicado por ciertos autores y afirmaba que mi paquete incluía una viñeta que lo demostraba. El usuario no podía encontrarla. La razón era simple: no existía. El modelo había fabricado una referencia plausible pero falsa.
+Lo experimenté directamente. Un usuario del paquete `netdiffuseR` de R [@R-netdiffuseR; @valente2020diffusion] me escribió diciéndome que ChatGPT le había informado sobre un algoritmo publicado por ciertos autores y afirmaba que mi paquete incluía una viñeta que lo demostraba. El usuario no podía encontrarla. La razón era simple: no existía. El modelo había fabricado una referencia plausible pero falsa.
 
 Este comportamiento —frecuentemente denominado "alucinación"— era una limitación fundamental de los primeros despliegues de LLMs. El modelo podía generar texto que *sonaba* correcto, pero no disponía de ningún mecanismo para verificar sus afirmaciones.
 
 ### De Modelos Estáticos a Agentes Activos
 
-Con la introducción de frameworks como el Model Context Protocol (MCP) de Anthropic, los LLMs adquirieron la capacidad de moverse más allá de la ventana de chat. En lugar de simplemente proponer código, un agente podía ejecutarlo, observar el resultado e iterar si fallaba. La idea es directa pero poderosa: darle al modelo una herramienta para probar su propio resultado.
+Con la introducción de frameworks como el Model Context Protocol (MCP) de Anthropic [@anthropic2024mcp], anunciado en noviembre de 2024, los LLMs adquirieron la capacidad de moverse más allá de la ventana de chat. En lugar de simplemente proponer código, un agente podía ejecutarlo, observar el resultado e iterar si fallaba. La idea es directa pero poderosa: darle al modelo una herramienta para probar su propio resultado.
 
 Si el código no funciona, el agente recibe retroalimentación y lo revisa. Este ciclo —proponer, ejecutar, evaluar, revisar— mejora drásticamente el rendimiento. En la práctica, esto transformó a los asistentes de código de generadores de texto ocasionalmente útiles en herramientas capaces de producir scripts funcionales.
 
@@ -62,7 +62,7 @@ Desde una perspectiva investigativa, esto fue transformador. Al preguntar sobre 
 
 ### Interactuando con el Mundo
 
-La evolución de la IA agéntica ha continuado con sistemas capaces de interactuar directamente con entornos locales. Proyectos de código abierto como OpenClaw extendieron la idea del MCP aún más, permitiendo que los agentes se ejecuten localmente en lugar de exclusivamente en la nube. A través de mecanismos como las "habilidades de agente" definidas (p. ej., `skills.md`), estos sistemas ofrecen formas estructuradas para que los modelos interactúen con correo electrónico, calendarios, archivos y otros recursos informáticos.
+La evolución de la IA agéntica ha continuado con sistemas capaces de interactuar directamente con entornos locales. Proyectos de código abierto como OpenClaw, que surgió a finales de 2025, extendieron la idea del MCP aún más, permitiendo que los agentes se ejecuten localmente en lugar de exclusivamente en la nube. A través de mecanismos como las "habilidades de agente" definidas (p. ej., `skills.md`), estos sistemas ofrecen formas estructuradas para que los modelos interactúen con correo electrónico, calendarios, archivos y otros recursos informáticos.
 
 Este cambio —de la generación pasiva de texto a la interacción activa con sistemas— marca un cambio cualitativo. Los sistemas de IA ya no están confinados a responder preguntas; ahora pueden realizar tareas, coordinar flujos de trabajo e integrarse con entornos personales y profesionales.
 

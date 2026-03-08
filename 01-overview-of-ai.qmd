@@ -46,13 +46,13 @@ While LLMs transformed how we interact with AI, the next major shift has come fr
 
 At the beginning of the recent AI surge, many users turned to models like ChatGPT for coding help. The results were mixed at best. Unless the task was very simple, the generated code often failed—sometimes syntactically, sometimes logically, and occasionally in more subtle ways. Worse, the models would confidently invent functionality that did not exist.
 
-I experienced this directly. A user of the `netdiffuseR` R package {{ agent:fill }} once wrote to me saying that ChatGPT had informed them of an algorithm published by certain authors and claimed that my package included a vignette demonstrating it. The user could not find it. The reason was simple: it did not exist. The model had fabricated a plausible but false reference.
+I experienced this directly. A user of the `netdiffuseR` R package [@R-netdiffuseR; @valente2020diffusion] once wrote to me saying that ChatGPT had informed them of an algorithm published by certain authors and claimed that my package included a vignette demonstrating it. The user could not find it. The reason was simple: it did not exist. The model had fabricated a plausible but false reference.
 
 This behavior—often referred to as “hallucination”—was a fundamental limitation of early LLM deployments. The model could generate text that *sounded* correct, but it had no mechanism to verify its claims.
 
 ### From Static Models to Acting Agents
 
-With the introduction of frameworks such as Anthropic’s Model Context Protocol (MCP) ({{ agent:fill }}), LLMs gained the ability to move beyond the chat window. Instead of merely proposing code, an agent could execute it, observe the result, and iterate if it failed. The idea is straightforward but powerful: give the model a tool to test its own output.
+With the introduction of frameworks such as Anthropic's Model Context Protocol (MCP) [@anthropic2024mcp], announced in November 2024, LLMs gained the ability to move beyond the chat window. Instead of merely proposing code, an agent could execute it, observe the result, and iterate if it failed. The idea is straightforward but powerful: give the model a tool to test its own output.
 
 If the code does not run, the agent receives feedback and revises it. This loop—propose, execute, evaluate, revise—dramatically improves performance. In practice, this transformed coding assistants from occasionally helpful text generators into tools that can produce working scripts.
 
@@ -62,7 +62,7 @@ From a research perspective, this was transformative. When asking about recent p
 
 ### Interacting with the World
 
-The evolution of agentic AI has continued with systems that can interact directly with local environments. Open-source projects such as OpenClaw extended the MCP idea further by allowing agents to run locally rather than exclusively in the cloud {{ agent:fill }}. Through mechanisms like defined “agent skills” (e.g., `skills.md`), these systems provide structured ways for models to interact with email, calendars, files, and other computer resources.
+The evolution of agentic AI has continued with systems that can interact directly with local environments. Open-source projects such as OpenClaw, which emerged in late 2025, extended the MCP idea further by allowing agents to run locally rather than exclusively in the cloud. Through mechanisms like defined "agent skills" (e.g., `skills.md`), these systems provide structured ways for models to interact with email, calendars, files, and other computer resources.
 
 This shift—from passive text generation to active system interaction—marks a qualitative change. AI systems are no longer confined to answering questions; they can now perform tasks, coordinate workflows, and integrate with personal and professional environments.
 
