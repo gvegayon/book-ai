@@ -57,6 +57,16 @@ Esta versión del capítulo no ha sido editada por un humano. Fue generada con l
 
 This note should remain until a human has reviewed and approved the content.
 
+## AI for filling the blanks
+
+Throughout the book, the project requires filling with factual information which could be:
+
+- Dates of events: Which can be pulled from websites.
+- Citations (bibliographic references): Which could be manuscripts or websites.
+- Names of people or companies: Which can also be pulled from websites.
+
+This will be flagged in the text with the placeholder "`{{ agent:fill }}`", which is where the AI should fill with the requested information based on the context. When filling citations, ensure you add the corresponding bibentry to `book.bib` or `packages.bib` (if software). 
+
 ## Spanish Translation
 
 A Spanish version of the book is maintained under the `es/` directory. When translating:
