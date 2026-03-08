@@ -47,7 +47,10 @@ book:
   - pdf
 
 
-bibliography: ../book.bib
+bibliography:
+  - ../book.bib
+  - ../packages.bib
+  - ../websites.bib
 
 biblio-style: apalike
 
@@ -55,7 +58,7 @@ format:
   html:
     html-math-method: katex
     toc: true
-    number-sections: false
+    number-sections: true
     theme: cerulean
   pdf:
     geometry: 

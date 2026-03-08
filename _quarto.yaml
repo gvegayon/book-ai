@@ -46,7 +46,10 @@ book:
   - pdf
 
 
-bibliography: book.bib
+bibliography:
+  - book.bib
+  - packages.bib
+  - websites.bib
 
 biblio-style: apalike
 

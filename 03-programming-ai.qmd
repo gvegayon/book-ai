@@ -159,7 +159,7 @@ The review process is one of the strongest advantages of cloud agents. GitHub’
 
 - Add line-by-line comments  
 - Provide an overall summary comment  
-- Tag the agent (e.g., `@copilot`) with additional instructions  
+- Tag the agent (e.g., `\@copilot`) with additional instructions  
 
 This structured review happens *before* the code is merged into the main branch, which is not always the case with local agents that directly modify files.
 
@@ -167,7 +167,7 @@ My usual workflow is:
 
 1. Add specific comments throughout the PR  
 2. Provide a clear overall comment with guidelines  
-3. Mention `@copilot` in the summary comment  
+3. Mention `\@copilot` in the summary comment  
 4. Optionally ask the AI to improve the `AGENTS.md` file if recurring issues appear  
 
 This final step is important. Over time, improving `AGENTS.md` makes your agents better aligned with your expectations and reduces repeated mistakes.
