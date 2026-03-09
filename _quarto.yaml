@@ -69,3 +69,5 @@ format:
     fontenc: T1
     include-in-header: preamble.tex
     keep-tex: true
+    link-citations: true
+    link-color: blue
