@@ -1,5 +1,8 @@
 FROM ghcr.io/rocker-org/devcontainer/geospatial:4.5
 
+# Adding version number
+ARG BUILD_DATE=2026-03-09
+
 RUN install2.r --error languageserver && \
     installGithub.r nx10/httpgd
 
@@ -9,7 +12,5 @@ RUN apt-get install --no-install-recommends -y libglpk-dev
 RUN apt-get update && apt-get install -y --no-install-recommends vim
 
 RUN quarto install tinytex 
-
-# RUN tlmgr update --self --all
 
 CMD ["bash"]
