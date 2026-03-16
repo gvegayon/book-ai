@@ -6,7 +6,7 @@ ARG BUILD_DATE=2026-03-09
 # Figuring out the architecture
 ARG ARCH=arm64
 
-RUN https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.35/quarto-1.9.35-linux-${ARCH}.deb && \
+RUN wgethttps://github.com/quarto-dev/quarto-cli/releases/download/v1.9.35/quarto-1.9.35-linux-${ARCH}.deb && \
     dpkg -i quarto-1.9.35-linux-${ARCH}.deb && \
     rm quarto-1.9.35-linux-${ARCH}.deb && \
     quarto add --no-prompt quarto-ext/orange-book
