@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: gvegayon/book-ai:latest
+      image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
     - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     container:
-      image: gvegayon/book-ai:latest
+      image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
     - uses: actions/checkout@v4
@@ -57,14 +57,14 @@ jobs:
     continue-on-error: true
 
     container:
-      image: gvegayon/book-ai:latest
+      image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
     - uses: actions/checkout@v4
 
     - name: Render English PDF
       run: |
-        quarto render --to pdf
+        quarto render --to orange-book-typst
 
     - name: Combine docs
       run: |
@@ -94,14 +94,14 @@ jobs:
     continue-on-error: true
 
     container:
-      image: gvegayon/book-ai:latest
+      image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
     - uses: actions/checkout@v4
 
     - name: Render Spanish PDF
       run: |
-        cd es && quarto render --to pdf
+        cd es && quarto render --to orange-book-typst
 
     - name: Combine docs
       run: |

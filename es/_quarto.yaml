@@ -5,6 +5,9 @@ project:
 execute: 
   cache: false
 
+extensions:
+  - quarto-ext/orange-book
+
 book:
   version: 2026.02.18
   google-analytics: G-04FCCG1TK2
@@ -60,13 +63,4 @@ format:
     toc: true
     number-sections: true
     theme: cerulean
-  pdf:
-    geometry: 
-      - top=1in
-      - bottom=1in
-      - left=1in
-      - right=1in
-    fontsize: 12pt
-    fontenc: T1
-    include-in-header: ../preamble.tex
-    keep-tex: true
+  orange-book-typst: default
