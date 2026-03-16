@@ -2,3 +2,4 @@
 _docs
 
 **/*.quarto_ipynb
+_extensions/
