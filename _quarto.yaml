@@ -5,6 +5,9 @@ project:
 execute: 
   cache: false
 
+extensions:
+  - quarto-ext/orange-book
+
 book:
   version: 2026.02.18
   google-analytics: G-04FCCG1TK2
