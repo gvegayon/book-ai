@@ -59,15 +59,4 @@ format:
     toc: true
     number-sections: true
     theme: cerulean
-  pdf:
-    geometry: 
-      - top=1in
-      - bottom=1in
-      - left=1in
-      - right=1in
-    fontsize: 12pt
-    fontenc: T1
-    include-in-header: preamble.tex
-    keep-tex: true
-    link-citations: true
-    link-color: blue
+  orange-book-typst: default

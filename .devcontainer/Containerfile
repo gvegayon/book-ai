@@ -1,16 +1,18 @@
-FROM ghcr.io/rocker-org/devcontainer/geospatial:4.5
+FROM ghcr.io/rocker-org/devcontainer/r-ver:4.5
 
 # Adding version number
 ARG BUILD_DATE=2026-03-09
 
-RUN install2.r --error languageserver && \
-    installGithub.r nx10/httpgd
+# Figuring out the architecture
+ARG ARCH=arm64
 
-# Missing libraries
-RUN apt-get install --no-install-recommends -y libglpk-dev
+RUN https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.35/quarto-1.9.35-linux-${ARCH}.deb && \
+    dpkg -i quarto-1.9.35-linux-${ARCH}.deb && \
+    rm quarto-1.9.35-linux-${ARCH}.deb && \
+    quarto add --no-prompt quarto-ext/orange-book
 
-RUN apt-get update && apt-get install -y --no-install-recommends vim
+# RUN apt-get update && apt-get install -y --no-install-recommends vim
 
-RUN quarto install tinytex && quarto update tinytex 
+# RUN quarto install tinytex && quarto update tinytex 
 
 CMD ["bash"]

@@ -55,7 +55,7 @@ This behavior—often referred to as “hallucination”—was a fundamental lim
 With the introduction of frameworks such as Anthropic's Model Context Protocol (MCP) [@anthropic2024mcp], announced in November 2024, LLMs gained the ability to move beyond the chat window. Instead of merely proposing code, an agent could execute it, observe the result, and iterate if it failed. The idea is straightforward but powerful: give the model a tool to test its own output.
 
 ::: {.callout-note title="The importance of MCPs"}
-The Model Context Protocol (MPCs) technology marked an important development in the AI era. After their announcement, the other large players--OpenAI [@wiggersOpenAIAdoptsRival2025], Google [@AnnouncingOfficialMCP] and Microsoft [@koesmarnoDataverseMCPServer2025]--immediately adopted the new technology. Anthropic later donated the technology to the Linux Foundation's Agentic AI Foundation [@foundationLinuxFoundationAnnounces2025].
+The Model Context Protocol (MPCs) technology marked an important development in the AI era. After their announcement, the other large players--OpenAI [@wiggersOpenAIAdoptsRival2025], Google [@AnnouncingOfficialMCP] and Microsoft [@koesmarnoDataverseMCPServer2025] --immediately adopted the new technology. Anthropic later donated the technology to the Linux Foundation's Agentic AI Foundation [@foundationLinuxFoundationAnnounces2025].
 :::
 
 If the code does not run, the agent receives feedback and revises it. This loop—propose, execute, evaluate, revise—dramatically improves performance. In practice, this transformed coding assistants from occasionally helpful text generators into tools that can produce working scripts.
