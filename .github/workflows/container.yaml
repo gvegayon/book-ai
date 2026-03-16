@@ -1,0 +1,44 @@
+name: Build and Push Container
+
+on:
+  push:
+    paths:
+      - .devcontainer/Containerfile
+  workflow_dispatch: 
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set architecture
+        id: arch
+        run: |
+          ARCH=$(uname -m)
+          if [ "$ARCH" = "x86_64" ]; then
+            echo "arch=amd64" >> $GITHUB_OUTPUT
+          else
+            echo "arch=arm64" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Log in to ghcr.io
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .devcontainer
+          file: .devcontainer/Containerfile
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+          build-args: ARCH=${{ steps.arch.outputs.arch }}
