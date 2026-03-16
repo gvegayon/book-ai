@@ -51,9 +51,9 @@ book:
 
 
 bibliography:
-  - ../book.bib
-  - ../packages.bib
-  - ../websites.bib
+  - book.bib
+  - packages.bib
+  - websites.bib
 
 biblio-style: apalike
 
