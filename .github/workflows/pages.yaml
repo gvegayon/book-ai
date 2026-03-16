@@ -19,15 +19,14 @@ jobs:
       image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Render English version
       run: |
         quarto render --to html
 
     - name: Upload artifact
-      # uses: actions/upload-pages-artifact@v3
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: _docs
         name: gh-page-html
@@ -39,7 +38,7 @@ jobs:
       image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Render Spanish version
       run: |
@@ -47,7 +46,7 @@ jobs:
 
     - name: Upload artifact
       # uses: actions/upload-pages-artifact@v3
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: es/_docs
         name: gh-page-html-es
@@ -60,7 +59,7 @@ jobs:
       image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Render English PDF
       run: |
@@ -73,14 +72,14 @@ jobs:
 
     - name: Upload artifact
       # uses: actions/upload-pages-artifact@v3
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: _docs
         name: gh-page-pdf
 
     - name: Upload LaTeX file
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: |
           _docs/*.tex
@@ -97,7 +96,7 @@ jobs:
       image: ghcr.io/gvegayon/book-ai:latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Render Spanish PDF
       run: |
@@ -110,14 +109,14 @@ jobs:
 
     - name: Upload artifact
       # uses: actions/upload-pages-artifact@v3
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: es/_docs
         name: gh-page-pdf-es
 
     - name: Upload LaTeX file
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         path: |
           es/_docs/*.tex
@@ -135,26 +134,26 @@ jobs:
     steps:
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: gh-page-html
         path: _docs
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: gh-page-html-es
         path: _docs/es
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: gh-page-pdf
         path: pdf
       continue-on-error: true
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         name: gh-page-pdf-es
         path: pdf-es
