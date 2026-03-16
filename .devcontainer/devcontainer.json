@@ -13,7 +13,8 @@
 							"quarto.quarto",
 							"tianyishi.rmarkdown",
 							"ms-vscode.live-server",
-							"ritwickdey.LiveServer"
+							"ritwickdey.LiveServer",
+							"github.vscode-github-actions"
 					]
 			}
 	},

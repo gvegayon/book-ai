@@ -54,6 +54,7 @@ jobs:
 
   build-pdf:
     runs-on: ubuntu-22.04
+    continue-on-error: true
 
     container:
       image: gvegayon/book-ai:latest
@@ -90,6 +91,7 @@ jobs:
 
   build-pdf-es:
     runs-on: ubuntu-22.04
+    continue-on-error: true
 
     container:
       image: gvegayon/book-ai:latest
@@ -126,6 +128,7 @@ jobs:
 
   combine:
     runs-on: ubuntu-22.04
+    if: ${{ always() && needs.build-html.result == 'success' && needs.build-html-es.result == 'success' }}
 
     needs: [build-html, build-html-es, build-pdf, build-pdf-es]
 
@@ -148,17 +151,23 @@ jobs:
       with:
         name: gh-page-pdf
         path: pdf
+      continue-on-error: true
 
     - name: Download artifacts
       uses: actions/download-artifact@v4
       with:
         name: gh-page-pdf-es
         path: pdf-es
+      continue-on-error: true
 
     - name: Combine
       run: |
-        cp -r pdf/* _docs
-        cp -r pdf-es/* _docs/es
+        if [ -d pdf ]; then
+          cp -r pdf/* _docs 2>/dev/null || true
+        fi
+        if [ -d pdf-es ]; then
+          cp -r pdf-es/* _docs/es 2>/dev/null || true
+        fi
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v4
