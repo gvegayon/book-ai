@@ -2,8 +2,11 @@ ifndef CNTBUILDER
   CNTBUILDER=podman
 endif
 
+# Evaluate the shell command once and store it
+ARCH := $(shell uname -m)
+
 build: Containerfile
-	$(CNTBUILDER) build -t book-ai:latest .
+	$(CNTBUILDER) build --build-arg ARCH=$(ARCH) -t book-ai:latest .
 
 run:
 	$(CNTBUILDER) run --rm -i book-ai:latest
