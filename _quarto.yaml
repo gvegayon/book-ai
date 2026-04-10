@@ -39,9 +39,10 @@ book:
     - 01-overview-of-ai.qmd
     - 02-writing-assistant.qmd
     - 03-programming-ai.qmd
-    - 04-agentic-ai.qmd
-    - 05-evaluating-writing.qmd
-    - 06-programmatic-ai.qmd
+    - 04-agentic.qmd
+    - 05-programming-with-ai-agents.qmd
+    - 06-evaluating-writing.qmd
+    - 07-programmatic-ai.qmd
   appendices:
     - references.qmd
     - news.qmd
