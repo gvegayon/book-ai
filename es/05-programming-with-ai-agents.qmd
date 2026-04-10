@@ -1,0 +1,63 @@
+---
+date: 2026-02-19
+date-modified: 2026-04-09
+---
+
+## Modo Agente
+
+El modo agente es uno de los desarrollos más poderosos en las herramientas de programación con IA. Va más allá de la conversación y comienza a *hacer cosas* realmente.
+
+En su forma más simple, el modo agente permite a la IA escribir código y probarlo. En lugar de limitarse a producir código que "cree" que funciona, el agente puede ejecutarlo, detectar errores e iterar antes de devolver un resultado.
+
+Los agentes modernos típicamente:
+
+1. Comienzan con un plan  
+2. Dividen la tarea en subtareas (a veces usando subagentes)  
+3. Implementan el código  
+4. Crean datos sintéticos o archivos de prueba  
+5. Ejecutan el código  
+6. Revisan si se detectan errores  
+
+Esto mejora drásticamente la fiabilidad.
+
+En GitHub Copilot (desde dentro de VS Code), puedes hacerle una pregunta a la IA, proporcionar contexto adicional (como archivos específicos) y elegir si ejecutar el agente en primer o segundo plano. El agente puede modificar código, generar pruebas e intentar validar su propio resultado.
+
+Este es un gran avance en comparación con la programación simple de pregunta y respuesta.
+
+---
+
+## Modo Agente (Nube)
+
+La versión en la nube del modo agente es incluso más poderosa.
+
+En lugar de usar tus recursos computacionales locales, la IA envía la tarea a un entorno en la nube y crea un Pull Request (PR) para ti. Ver al agente ejecutar código en línea es impresionante. Ahorra recursos locales y fomenta una formulación más clara del problema.
+
+En el modo agente en la nube de GitHub:
+
+- Se crea una nueva sesión de cómputo  
+- El entorno puede preconfigurarse con las dependencias requeridas  
+- Todo el proceso es visible para el usuario  
+- El resultado final se envía como un Pull Request  
+
+Dependiendo de la complejidad, los agentes tardan generalmente unos diez minutos o menos en completar una tarea y enviar un PR.
+
+Sin embargo, hay una nota de cautela importante: es tentador ejecutar muchos agentes simultáneamente. Pero el humano sigue en el ciclo. Alguien todavía necesita revisar el código cuidadosamente antes de fusionarlo.
+
+El proceso de revisión es una de las mayores ventajas de los agentes en la nube. La interfaz de GitHub te permite:
+
+- Agregar comentarios línea por línea  
+- Proporcionar un comentario de resumen general  
+- Etiquetar al agente (por ejemplo, `\@copilot`) con instrucciones adicionales  
+
+Esta revisión estructurada ocurre *antes* de que el código se fusione en la rama principal, lo cual no siempre es el caso con los agentes locales que modifican archivos directamente.
+
+Mi flujo de trabajo habitual es:
+
+1. Agregar comentarios específicos a lo largo del PR  
+2. Proporcionar un comentario general claro con pautas  
+3. Mencionar `\@copilot` en el comentario de resumen  
+4. Opcionalmente, pedirle a la IA que mejore el archivo `AGENTS.md` si aparecen problemas recurrentes  
+
+Este último paso es importante. Con el tiempo, mejorar el `AGENTS.md` hace que tus agentes estén mejor alineados con tus expectativas y reduce los errores repetidos.
+
+---

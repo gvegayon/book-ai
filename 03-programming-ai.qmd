@@ -1,13 +1,9 @@
 ---
 date: 2026-02-19
-date-modified: 2026-02-22
+date-modified: 2026-04-09
 ---
 
 # AI for Programming
-
-::: {.callout-note title="AI version"}
-This version of the chapter hasn't been edited by a human. It was generated with the help of AI by providing the core ideas and asking the AI to help with writing and editing. Once this chapter is reviewed by a human, this note will be removed.
-:::
 
 There are many ways in which we can use AI for coding: doing what some call *vibe coding*, relying on autocompletion, using AI assistants for planning, and—my favorite—assigning tasks to AI agents. Each of these modes represents a different level of involvement between the human and the model, and each has its own strengths and limitations.
 
@@ -71,9 +67,7 @@ You could ask:
 
 Providing structure and clear expectations improves reliability.
 
-That said, directly asking for code in a conversational way is not the most efficient use of AI. This is one reason why OpenAI created ChatGPT Codex and why other providers are investing heavily in agentic workflows. The real advantage comes from **Agentic AI**.
-
-Before getting there, however, let us look at code completion.
+That said, directly asking for code in a conversational way is not the most efficient use of AI. This is one reason why OpenAI created ChatGPT Codex and why other providers are investing heavily in agentic workflows. The real advantage comes from **Agentic AI**, which we will explore in the next couple of chapters.
 
 ---
 
@@ -111,67 +105,5 @@ In planning mode, the AI creates a checklist of the steps required to implement 
 - Break it into manageable components  
 - Maintain control over the implementation process  
 
-Planning mode is particularly useful when the task is too complex to hand off blindly to an agent.
+Planning mode is particularly useful when the task is too complex to hand off blindly to an agent, which is the topic of our next chapter.
 
----
-
-## Agent Mode
-
-Agent mode is one of the most powerful developments in AI coding tools. It goes beyond conversation and starts actually *doing things*.
-
-In its simplest form, agent mode allows the AI to write code and test it. Instead of merely producing code that it “thinks” works, the agent can execute it, detect bugs, and iterate before returning a result.
-
-Modern agents typically:
-
-1. Start with a plan  
-2. Break the task into subtasks (sometimes using subagents)  
-3. Implement the code  
-4. Create synthetic data or test files  
-5. Execute the code  
-6. Revise if errors are detected  
-
-This dramatically improves reliability.
-
-In GitHub Copilot (from within VS Code), you can ask the AI a question, provide additional context (such as specific files), and choose whether to run the agent in the foreground or background. The agent may modify code, generate tests, and attempt to validate its own output.
-
-This is a major step forward compared to simple prompt-and-response coding.
-
----
-
-## Agent Mode (Cloud)
-
-The cloud version of agent mode is even more powerful.
-
-Instead of using your local computational resources, the AI submits the task to a cloud environment and creates a Pull Request (PR) for you. Watching the agent run code online is impressive. It saves local resources and encourages clearer problem formulation.
-
-In GitHub’s cloud agent mode:
-
-- A new compute session is created  
-- The environment can be preconfigured with required dependencies  
-- The entire process is visible to the user  
-- The final output is submitted as a Pull Request  
-
-Depending on complexity, agents typically take about ten minutes or less to complete a task and submit a PR.
-
-There is, however, an important note of caution: it is tempting to run many agents simultaneously. But the human remains in the loop. Someone still needs to review the code carefully before merging it.
-
-The review process is one of the strongest advantages of cloud agents. GitHub’s interface allows you to:
-
-- Add line-by-line comments  
-- Provide an overall summary comment  
-- Tag the agent (e.g., `\@copilot`) with additional instructions  
-
-This structured review happens *before* the code is merged into the main branch, which is not always the case with local agents that directly modify files.
-
-My usual workflow is:
-
-1. Add specific comments throughout the PR  
-2. Provide a clear overall comment with guidelines  
-3. Mention `\@copilot` in the summary comment  
-4. Optionally ask the AI to improve the `AGENTS.md` file if recurring issues appear  
-
-This final step is important. Over time, improving `AGENTS.md` makes your agents better aligned with your expectations and reduces repeated mistakes.
-
----
-
-AI for programming is not about replacing the developer. It is about redefining the workflow. The tools are powerful—but only when context is strong, instructions are clear, and the human remains actively engaged in the process.

@@ -1,13 +1,9 @@
 ---
 date: 2026-02-19
-date-modified: 2026-02-23
+date-modified: 2026-04-09
 ---
 
 # IA para Programación
-
-::: {.callout-note title="Versión IA"}
-Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
-:::
 
 Hay muchas formas en las que podemos usar IA para programar: haciendo lo que algunos llaman *vibe coding*, apoyándose en el autocompletado, usando asistentes de IA para planificar y —mi favorita— asignando tareas a agentes de IA. Cada uno de estos modos representa un nivel diferente de involucramiento entre el humano y el modelo, y cada uno tiene sus propias fortalezas y limitaciones.
 
@@ -71,9 +67,7 @@ Podrías pedir:
 
 Proporcionar estructura y expectativas claras mejora la fiabilidad.
 
-Dicho esto, pedir código directamente de forma conversacional no es el uso más eficiente de la IA. Esta es una de las razones por las que OpenAI creó ChatGPT Codex y por las que otros proveedores están invirtiendo fuertemente en flujos de trabajo agénticos. La verdadera ventaja proviene de la **IA Agéntica**.
-
-Antes de llegar a eso, sin embargo, veamos el autocompletado de código.
+Dicho esto, pedir código directamente de forma conversacional no es el uso más eficiente de la IA. Esta es una de las razones por las que OpenAI creó ChatGPT Codex y por las que otros proveedores están invirtiendo fuertemente en flujos de trabajo agénticos. La verdadera ventaja proviene de la **IA Agéntica**, que exploraremos en los próximos capítulos.
 
 ---
 
@@ -111,67 +105,4 @@ En el modo de planificación, la IA crea una lista de verificación de los pasos
 - Dividirla en componentes manejables
 - Mantener el control sobre el proceso de implementación
 
-El modo de planificación es especialmente útil cuando la tarea es demasiado compleja para delegarla ciegamente a un agente.
-
----
-
-## Modo Agente
-
-El modo agente es uno de los desarrollos más poderosos en las herramientas de programación con IA. Va más allá de la conversación y comienza a *hacer cosas* realmente.
-
-En su forma más simple, el modo agente permite a la IA escribir código y probarlo. En lugar de limitarse a producir código que "cree" que funciona, el agente puede ejecutarlo, detectar errores e iterar antes de devolver un resultado.
-
-Los agentes modernos típicamente:
-
-1. Comienzan con un plan
-2. Dividen la tarea en subtareas (a veces usando subagentes)
-3. Implementan el código
-4. Crean datos sintéticos o archivos de prueba
-5. Ejecutan el código
-6. Revisan si se detectan errores
-
-Esto mejora drásticamente la fiabilidad.
-
-En GitHub Copilot (desde dentro de VS Code), puedes hacerle una pregunta a la IA, proporcionar contexto adicional (como archivos específicos) y elegir si ejecutar el agente en primer o segundo plano. El agente puede modificar código, generar pruebas e intentar validar su propio resultado.
-
-Este es un gran avance en comparación con la programación simple de pregunta y respuesta.
-
----
-
-## Modo Agente (Nube)
-
-La versión en la nube del modo agente es incluso más poderosa.
-
-En lugar de usar tus recursos computacionales locales, la IA envía la tarea a un entorno en la nube y crea un Pull Request (PR) para ti. Ver al agente ejecutar código en línea es impresionante. Ahorra recursos locales y fomenta una formulación más clara del problema.
-
-En el modo agente en la nube de GitHub:
-
-- Se crea una nueva sesión de cómputo
-- El entorno puede preconfigurarse con las dependencias requeridas
-- Todo el proceso es visible para el usuario
-- El resultado final se envía como un Pull Request
-
-Dependiendo de la complejidad, los agentes tardan generalmente unos diez minutos o menos en completar una tarea y enviar un PR.
-
-Sin embargo, hay una nota de cautela importante: es tentador ejecutar muchos agentes simultáneamente. Pero el humano sigue en el ciclo. Alguien todavía necesita revisar el código cuidadosamente antes de fusionarlo.
-
-El proceso de revisión es una de las mayores ventajas de los agentes en la nube. La interfaz de GitHub te permite:
-
-- Agregar comentarios línea por línea
-- Proporcionar un comentario de resumen general
-- Etiquetar al agente (por ejemplo, `@copilot`) con instrucciones adicionales
-
-Esta revisión estructurada ocurre *antes* de que el código se fusione en la rama principal, lo cual no siempre es el caso con los agentes locales que modifican archivos directamente.
-
-Mi flujo de trabajo habitual es:
-
-1. Agregar comentarios específicos a lo largo del PR
-2. Proporcionar un comentario general claro con pautas
-3. Mencionar `@copilot` en el comentario de resumen
-4. Opcionalmente, pedirle a la IA que mejore el archivo `AGENTS.md` si aparecen problemas recurrentes
-
-Este último paso es importante. Con el tiempo, mejorar el `AGENTS.md` hace que tus agentes estén mejor alineados con tus expectativas y reduce los errores repetidos.
-
----
-
-La IA para programación no se trata de reemplazar al desarrollador. Se trata de redefinir el flujo de trabajo. Las herramientas son poderosas —pero solo cuando el contexto es sólido, las instrucciones son claras y el humano permanece activamente involucrado en el proceso.
+El modo de planificación es especialmente útil cuando la tarea es demasiado compleja para delegarla ciegamente a un agente, que es el tema de nuestro siguiente capítulo.

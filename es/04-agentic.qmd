@@ -1,0 +1,48 @@
+---
+date: 2026-04-09
+date-modified: 2026-04-09
+---
+
+# IA Agéntica
+
+::: {.callout-note title="Versión IA"}
+Esta versión del capítulo no ha sido editada por un humano. Fue generada con la ayuda de IA proporcionando las ideas centrales y pidiendo a la IA que ayudara con la redacción y edición. Una vez que este capítulo sea revisado por un humano, esta nota será eliminada.
+:::
+
+En mi opinión, la IA Agéntica ha sido clave en la revolución de la IA. Es lo que marcó la transición de un "chatbot divertido" a una herramienta poderosa. Usando IA Agéntica, los usuarios pueden ir más allá de la simple generación de texto e interactuar con el mundo fuera del cuadro de chat. Este capítulo ofrece una visión general del estado actual de la IA Agéntica, qué tiene de especial, sus posibles usos y sus riesgos.
+
+## Recuperación de información
+
+La IA Agéntica puede describirse como la capacidad de los modelos de lenguaje para ejecutar tareas. La mayoría de las veces, esto ocurre a través de herramientas especializadas o, más recientemente, mediante estándares emergentes como el Model Context Protocol y frameworks como SKILL.md.
+
+El primer atisbo de IA Agéntica fue sutil pero poderoso: cuando ChatGPT adquirió la capacidad de navegar por la web. Antes de que la IA Agéntica entrara en juego, la mayoría de los LLMs tenían la desventaja de que la información que proporcionaban solía estar desactualizada. Una vez que las IAs obtuvieron acceso a internet, esto dejó de ser un problema tan grande. En lugar de depender únicamente de sus datos de entrenamiento (que ya incluyen gran parte de internet), los modelos podían realizar búsquedas y recuperar información actualizada.
+
+Además, al acceder a información en tiempo real, estos sistemas adquirieron la capacidad de validar sus respuestas de forma más explícita. En lugar de simplemente confiar en que el modelo es lo suficientemente bueno, la IA ahora puede verificar sus respuestas contra fuentes externas, reduciendo las alucinaciones (aunque no eliminándolas; ver @savitzAIHallucinationVery, @smithAIChatbotsSpew). No obstante, esto introdujo un problema diferente: al citar artículos, los modelos a veces referenciaban publicaciones reales que tenían poca o ninguna conexión con la respuesta —por ejemplo, vinculando un método inexistente a un artículo científico real.
+
+Tras las quejas de los usuarios, los proveedores introdujeron mejoras para mitigar este problema. En particular, la mayoría ahora se apoya en sistemas de Generación Aumentada por Recuperación (RAG, por sus siglas en inglés). En términos sencillos, los LLMs comenzaron a depender de sistemas de recuperación, combinando efectivamente la búsqueda con la generación y fundamentando sus respuestas en contenido existente e indexado.
+
+## Programación (e interacción con sistemas)
+
+En programación, la IA Agéntica ha hecho que los LLMs sean significativamente más poderosos. Una queja común de los usuarios solía ser que el código generado por IA no funcionaba. Si bien esto sigue siendo un problema, su prevalencia ha disminuido considerablemente. La razón es simple: los LLMs ya no solo proponen código —pueden probarlo (cuando tienen acceso a herramientas de ejecución) antes de presentarlo al usuario. En esencia, obtuvieron acceso a entornos de computación controlados.
+
+La premisa es directa: al darle a un LLM acceso a un entorno de línea de comandos, puede interactuar directamente con un sistema —leyendo y escribiendo archivos, navegando por la web y ejecutando programas. Los primeros ejemplos incluían sistemas de IA analizando datos mediante scripts de Python y ejecutando procesos simples en segundo plano. Hoy en día, los agentes pueden, cuando se les otorga permiso, interactuar directamente con tu computadora, leer tus archivos y usar ese contexto adicional para generar mejores respuestas. Este ciclo iterativo —generar, probar, refinar— es lo que en última instancia impulsa a los agentes de IA en programación.
+
+Aunque las aplicaciones de programación han recibido la mayor atención (por ejemplo, Claude de Anthropic), la IA Agéntica ahora se está expandiendo a muchos otros dominios.
+
+## Democratización de los agentes
+
+Más recientemente, con el auge de los frameworks de agentes locales (por ejemplo, proyectos como OpenClaw), la IA Agéntica ha adquirido una nueva dimensión. Mientras que la mayoría de los agentes de IA operan en entornos híbridos —interactuando localmente con archivos pero realizando el cómputo en la nube— estos enfoques están acelerando el interés en ejecutar agentes localmente con acceso más amplio al sistema.
+
+Dicho esto, los agentes locales no son completamente nuevos. Por ejemplo, proyectos como ollama.com (discutido más adelante en este libro) ya exploran ideas similares. Sin embargo, la capacidad de configurar un sistema local con un LLM que pueda realizar acciones en tu nombre —como hacer compras, enviar mensajes o gestionar reservas— ha sido revolucionaria.
+
+Personalmente, aún no dependo de esta tecnología. En mi opinión, los agentes de IA todavía están lejos de ser confiablemente equivalentes al nivel humano. Sin embargo, creo que en ciertos contextos, este enfoque puede ser muy útil.
+
+## El riesgo
+
+La IA Agéntica es un concepto poderoso. En el trabajo científico, los agentes pueden pensarse como asistentes de investigación capaces de manejar tareas simples pero tediosas. Personalmente, uso agentes con frecuencia —por ejemplo, para investigar temas (por ejemplo, a través de las herramientas de investigación de ChatGPT), redactar cambios iniciales de código (a través de GitHub Copilot y los modelos de Anthropic) y preparar diapositivas.
+
+Sin embargo, en ninguno de estos escenarios confío completamente en el sistema. El concepto de mantener a un humano en el ciclo no puede subestimarse, especialmente en contextos donde los errores pueden dañar reputaciones —o incluso vidas. Esto no es una exageración; en mi trabajo en salud pública, ejecuto modelos y simulaciones que influyen en decisiones de política.
+
+Por esa razón, soy escéptico de las afirmaciones de que múltiples agentes pueden usarse simultáneamente de manera confiable para manejar flujos de trabajo de investigación complejos. En mi opinión, esto a menudo es una exageración y no es una práctica que recomendaría.
+
+Además, Target, la cadena minorista estadounidense, recientemente modificó sus términos y condiciones advirtiendo a los clientes que no se responsabilizará si un sistema de IA comete un error (esto aplica en el caso de usuarios que usan herramientas agénticas como OpenClaw o Gemini de Google) [@shimkusTargetHasWarning]. Target está siendo prudente; está previendo algo que todos sabemos que sucederá.

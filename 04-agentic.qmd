@@ -1,0 +1,45 @@
+---
+date: 2026-04-09
+date-modified: 2026-04-09
+---
+
+# Agentic AI
+
+In my opinion, Agentic AI has been key to the AI revolution. It is what made the transition from a "fun chatbot" to a powerful tool. Using Agentic AI, users can go beyond simple text generation and interact with the world outside the chatbox. This chapter provides a general overview of the current state of Agentic AI, what is so special about it, its possible uses, and its pitfalls.
+
+## Information retrieval
+
+Agentic AI can be described as the capability of language models to execute tasks. Most of the time, this happens either through specialized tools or, more recently, via emerging standards such as the Model Context Protocol and frameworks like SKILL.md.
+
+The first glimpse of Agentic AI was subtle but powerful: when ChatGPT gained the ability to browse the web. Before Agentic AI came into play, most LLMs had the caveat that the information they provided was often outdated. Once AIs gained access to the internet, this became less of a problem. Instead of relying solely on their training data (which already includes much of the internet), models could perform searches and retrieve up-to-date information.
+
+In addition, by accessing live information, these systems gained the ability to validate their responses more explicitly. Rather than simply trusting that the model is good enough, AI can now check its answers against external sources, reducing hallucinations (although not eliminating them; see @savitzAIHallucinationVery, @smithAIChatbotsSpew). Nonetheless, this introduced a different problem: when citing papers, models would sometimes reference real publications that had little or no connection to the answer—for instance, linking a non-existent method to an actual scientific article.
+
+After user backlash, providers introduced improvements to mitigate this issue. In particular, most now rely on Retrieval Augmented Generation (RAG) systems. In plain terms, LLMs began to rely on retrieval systems, effectively combining search with generation and grounding their responses in existing, indexed content.
+
+## Coding (and systems interaction)
+
+In coding, Agentic AI has made LLMs significantly more powerful. A common user complaint used to be that AI-generated code did not work. While this is still an issue, its prevalence has decreased considerably. The reason is simple: LLMs no longer just propose code—they can test it (when given access to execution tools) before presenting it to the user. In essence, they gained access to controlled computing environments.
+
+The premise is straightforward: by giving an LLM access to a command-line environment, it can directly interact with a system—reading and writing files, browsing the web, and executing programs. Early examples included AI systems analyzing data through Python scripts and running simple processes behind the scenes. Today, agents can, when granted permission, interact directly with your computer, read your files, and use that additional context to generate better responses. This iterative loop—generate, test, refine—is what ultimately powers AI agents in coding.
+
+Although coding applications have received the most attention (e.g., Anthropic’s Claude), Agentic AI is now expanding into many other domains.
+
+## Democratization of Agents
+
+More recently, with the rise of local agent frameworks (e.g., projects like OpenClaw), Agentic AI has taken on a new dimension. While most AI agents operate in hybrid environments—interacting locally with files but performing computation in the cloud—these approaches are accelerating interest in running agents locally with broader system access.
+
+That said, local agents are not entirely new. For example, projects like ollama.com (discussed later in this book) already explore similar ideas. However, the ability to set up a local system with an LLM that can perform actions on your behalf—such as making purchases, sending messages, or managing bookings—has been groundbreaking.
+
+I do not personally rely on this technology yet. In my view, AI agents are still far from being reliably human-level (add citations of failures here). However, I do think that in certain contexts, this approach can be very useful.
+
+## The pitfall
+
+Agentic AI is a powerful concept. In scientific work, agents can be thought of as research assistants capable of handling simple but tedious tasks. Personally, I use agents frequently—for example, to research topics (e.g., via ChatGPT’s research-oriented tools), draft initial code changes (through GitHub Copilot and Anthropic’s models), and prepare slides.
+
+However, in none of these scenarios do I fully trust the system. The concept of keeping a human in the loop cannot be overstated, especially in contexts where mistakes can harm reputations—or even lives. This is not an exaggeration; in my work in public health, I run models and simulations that influence policy decisions.
+
+For that reason, I am skeptical of claims that multiple agents can be reliably used simultaneously to handle complex research workflows. In my view, this is often an overstatement and not a practice I would recommend.
+
+Moreover, Target, the US retailer, recently modified their terms and conditions warning customers that it will not take responsibility if an AI system made a mistake (this applies in the case of users leveraging agentic tools like OpenClaw or Google's Gemini) [@shimkusTargetHasWarning]. Target is being wise; it is foreseeing something we all know will happen.
+
