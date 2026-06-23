@@ -9,14 +9,14 @@ extensions:
   - quarto-ext/orange-book
 
 book:
-  version: 2026.02.18
+  version: 2026.06.23
   google-analytics: G-04FCCG1TK2
   title: AI for the Scientist in a Hurry
   subtitle: or "Running Notes and Reflections About AI"
   author: George G. Vega Yon, Ph.D.
   language: en
   original-date: 2018-01-19
-  date: 2026-02-18
+  date: 2026-06-23
   cover-image: img/book-cover.png
   cover-image-alt: 'An AI image generated with Bing: Draw an image of a social network. Include a person examining the network and holding a laptop in one hand. The laptop should have the logo of the R programming language.'
   page-footer: AI for the Scientist in a Hurry - [https://ggvy.cl](https://ggvy.cl){target="_blank"}

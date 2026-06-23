@@ -1,9 +1,17 @@
 ---
-date: 2026-02-18
-date-modified: 2026-02-19
+date: 2026-06-23
+date-modified: 2026-06-23
 ---
 
 # News
+
+## Version 2026.06.23
+
+Added a new chapter focused on local AI workflows with Ollama:
+
+- **Example with Ollama**: A practical walkthrough of text generation and embeddings in R using the `ollamar` package, including a similarity example with Sunbelt 2026 workshop descriptions.
+
+This update also clarifies the separation between programmatic API usage and a dedicated, hands-on Ollama chapter.
 
 ## Version 2026.02.18
 
