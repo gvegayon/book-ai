@@ -43,6 +43,7 @@ book:
     - 05-programming-with-ai-agents.qmd
     - 06-evaluating-writing.qmd
     - 07-programmatic-ai.qmd
+    - 08-ollama.qmd
   appendices:
     - references.qmd
     - news.qmd
@@ -63,4 +64,4 @@ format:
     toc: true
     number-sections: true
     theme: cerulean
-  orange-book-typst: default
+  # orange-book-typst: default

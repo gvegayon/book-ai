@@ -1,0 +1,133 @@
+---
+date: 2026-02-19
+date-modified: 2026-06-23
+execute:
+  freeze: true
+---
+
+# Example with ollama
+
+[Ollama](https://ollama.com/){target="_blank"} is a tool that allows you to run large language models locally on your machine. It provides a simple interface to interact with these models without needing to rely on external APIs. In R, we can use the [`ollamar`](https://cran.r-project.org/package=ollamar){target="_blank"} package to interact with it. 
+
+::: {.callout-tip}
+There is also the `rollama` R package which provides a more R-like interface to Ollama, making it easier to work with in R scripts and applications. Nonetheles, the `ollamar` package is closely aligned with the official Ollama API and is more actively maintained. For this reason, we will use `ollamar` in this example.
+:::
+
+To set it up, you can follow the instructions available in the R package vignette [here](https://cran.r-project.org/web/packages/ollamar/vignettes/ollamar.html){target="_blank"}. In brief, you need:
+
+1. Install the `ollamar` package from CRAN.
+2. Install the Ollama application on your machine.
+3. Start the Ollama application and ensure it is running.
+
+Once you have those three steps completed, you can try playing with different models. In this example, we will use the lamma3.2:1b model (Llama 3.2 with 1 billion parameters) to (a) generate some text using a prompt (like a chatbot), and (b) process text using embeddings.
+
+## Generating some text
+
+Let's start by calling ollama and verifying that the connection is up and running:
+
+```{r}
+#| label: ollama-text-generation
+library(ollamar)
+
+# Checking that the connection is up and running
+test_connection()
+```
+
+Once this is working we can check the available models; in our case, the lamma3.2:1b model is already installed and available for use. You can check the available models with the following command:
+
+```{r}
+list_models()
+```
+
+To generate some text, we simply need to call the function `generate()` from the package. Let's see what ollama says about INSNA Sunbelt! Since we are using a local LLM, the response will take a little bit longer than a typical API call; but the benefit is that we are running the model locally without passing our data to a large external server on the Cloud!
+
+```{r}
+#| label: ollama-text-generation-2
+#| cache: true
+ans <- generate(
+  model = "llama3.2:1b",
+  prompt = "What is INSNA Sunbelt?"
+)
+
+# Print the status
+ans
+```
+
+The model returns a response with status 200, which means that the request was successful. The generated text is stored in the `text` field of the response. We can extract and print it as follows:
+
+```{r}
+#| cache: true
+resp_process(ans, "text")
+```
+
+This is the most basic functionality of the Ollama API. You can also use it for multimodal tasks, such as processing and generating text from images. The embeddings functionality is fantastic, and furthermore, a nice feature that may be of good use for many researchers. The next example tries to compare some text using the embeddings functionality of the LLM.
+
+## Using embeddings
+
+For the embeddings component, we can simply use the `embeddings()` function from the `ollamar` package. This function allows us to generate embeddings for a given text, which can then be used for various tasks such as similarity comparisons, clustering, or as input features for machine learning models. The embeddings are a numerical representation of the text (or other types of data) that can capture semantic meaning and relationships between different pieces of text. 
+
+::: {.callout-note}
+To generate the agenda data stored in sunbelt2026_workshops.csv, we asked an AI (GitHub Copilot using Claude Sonnet 4.6) using the following prompt: "write an R script that reads the data in this file,, and generates a CSV dataset that contains the details of the events." The file mentioned was an HTML file that I extracted from the INSNA Sunbelt 2026 website. 
+:::
+
+For this example, we will use INSNA Sunbelt 2026's agenda and compare submissions by similarity based on their embeddings. Let's start by loading the data and looking at a couple of rows:
+
+
+```{r}
+#| label: ollama-embeddings
+library(data.table)
+agenda <- fread("sunbelt2026_workshops.csv")
+agenda[1:2, .(title, description)]
+```
+
+To use the embeddings model, we simply need to call the function `embed()` from the package. For this task, we will use the gemma embedding model (you can pull it using `pull("embeddinggemma:300m")`) Let's generate embeddings for the titles and descriptions of the agenda items:
+
+```{r}
+#| cache: true
+workshop_embeddings <- embed(
+  "embeddinggemma:300m",
+  agenda[, description]
+  )
+
+# Looking at the first two rows and first
+# five columns of the embeddings
+workshop_embeddings[1:2, 1:5]
+```
+
+With the embeddings, we can compute similarity between different agenda items. For example, we can calculate the euclidean distance between the embeddings, and subsequently identify similar workshops:
+
+```{r}
+#| cache: true
+ws_distances <- dist(t(workshop_embeddings)) |>
+  as.matrix()
+```
+
+Looking at the first workshop (`r agenda[1, title]`), we can find the five most similar workshops based on their embeddings:
+
+
+```{r}
+#| cache: true
+similar_ws_to_one <- ws_distances[1, ] |>
+  sort() |>
+  head(5) |>
+  names() |> 
+  as.integer()
+
+# Which are similar?
+agenda[similar_ws_to_one, .(title)]
+
+# Which are the least similar?
+least_similar_ws_to_one <- -ws_distances[1, ] |>
+  sort() |>
+  head(5) |>
+  names() |> 
+  as.integer()
+
+agenda[least_similar_ws_to_one, .(title)]
+```
+
+Which seems to check!
+
+## Final thoughts
+
+Using Ollama we can leverage the power of LLMs (or SLMs in this case) locally on our machines. The ollama project also provides some capabilities to run larger models on the cloud, for which you would need to have an account with them. Multiple project around rely on tools such as Ollama to run LLMs locally, and the R package `ollamar` provides a simple interface to interact with these models. From the research perspective, this allow scientists to go beyond the simple exploitation of a Chat bot and use LLMs for more complex tasks such as embeddings, clustering, and other machine learning tasks.
