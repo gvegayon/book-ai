@@ -128,6 +128,53 @@ agenda[least_similar_ws_to_one, .(title)]
 
 Which seems to check!
 
+## Visualizing the network
+
+We can take the embeddings-based similarity one step further and visualize the relationships between workshops as a network. In this network, each workshop is a node, and we draw a directed edge from workshop $i$ to each of its five most similar workshops (i.e., the five with the smallest pairwise distance). We'll use the [`netplot`](https://cran.r-project.org/package=netplot){target="_blank"} R package to create this visualization.
+
+```{r}
+#| label: ollama-network
+#| cache: true
+library(igraph)
+library(netplot)
+
+n <- nrow(ws_distances)
+
+# For each workshop, find the 5 most similar ones
+# (smallest distance, excluding self)
+edges <- lapply(seq_len(n), function(i) {
+  dists <- ws_distances[i, ]
+  dists[i] <- Inf       # exclude self-loops
+  top5 <- order(dists)[1:5]
+  cbind(from = i, to = top5)
+})
+edges <- do.call(rbind, edges)
+
+# Build an undirected igraph network and remove duplicate edges
+net <- graph_from_edgelist(edges, directed = FALSE)
+net <- simplify(net)
+
+# Assign workshop titles as vertex labels
+V(net)$name <- agenda$title
+```
+
+Now we can visualize the network:
+
+```{r}
+#| label: ollama-network-plot
+#| cache: true
+nplot(
+  net,
+  vertex.label      = NA,   # omit labels to keep the plot readable
+  vertex.size       = 0.05,
+  edge.width        = 0.5,
+  edge.color        = ~ ego(alpha = 0.5),
+  edge.curvature    = 0.15
+)
+```
+
+Each node represents a workshop, and edges connect workshops that are semantically close according to the Gemma embeddings. Clusters in the network correspond to groups of topically related workshops, revealing the thematic structure of the Sunbelt 2026 programme without ever reading a single abstract.
+
 ## Final thoughts
 
 Using Ollama we can leverage the power of LLMs (or SLMs in this case) locally on our machines. The ollama project also provides some capabilities to run larger models on the cloud, for which you would need to have an account with them. Multiple project around rely on tools such as Ollama to run LLMs locally, and the R package `ollamar` provides a simple interface to interact with these models. From the research perspective, this allow scientists to go beyond the simple exploitation of a Chat bot and use LLMs for more complex tasks such as embeddings, clustering, and other machine learning tasks.
